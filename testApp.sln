@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notebook", "testApp\Notebook.csproj", "{06E4AD6A-A9D7-4951-97F2-7FB108E378FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutocompleteMenu", "..\AutocompleteMenu\AutocompleteMenu\AutocompleteMenu.csproj", "{43CBC9AA-6A8E-463F-83A9-AFF3124AFDB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06E4AD6A-A9D7-4951-97F2-7FB108E378FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E4AD6A-A9D7-4951-97F2-7FB108E378FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E4AD6A-A9D7-4951-97F2-7FB108E378FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E4AD6A-A9D7-4951-97F2-7FB108E378FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43CBC9AA-6A8E-463F-83A9-AFF3124AFDB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43CBC9AA-6A8E-463F-83A9-AFF3124AFDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43CBC9AA-6A8E-463F-83A9-AFF3124AFDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43CBC9AA-6A8E-463F-83A9-AFF3124AFDB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5732E650-FFB5-4C9E-885A-BE47D48CA40D}
+	EndGlobalSection
+EndGlobal
