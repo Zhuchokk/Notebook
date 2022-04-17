@@ -462,7 +462,8 @@ namespace testApp
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+			Form recognition = new RecognitionForm();
+			recognition.Show();
         }
     }
     
