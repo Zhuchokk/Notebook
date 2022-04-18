@@ -75,6 +75,7 @@ namespace testApp
             this.wordWrapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autocompleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.readTheTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textFromFotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntoSwitchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,7 +88,6 @@ namespace testApp
             this.NumLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.autocompleteMenu1 = new AutocompleteMenuNS.AutocompleteMenu();
             this.lineNumbers_For_RichTextBox1 = new LineNumbers.LineNumbers_For_RichTextBox();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -411,11 +411,19 @@ namespace testApp
             this.autocompleteToolStripMenuItem.Text = "Autocomplete";
             this.autocompleteToolStripMenuItem.Click += new System.EventHandler(this.autocompleteToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(241, 26);
+            this.toolStripMenuItem1.Text = "Recognize The Speech";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // readTheTextToolStripMenuItem
             // 
             this.readTheTextToolStripMenuItem.Name = "readTheTextToolStripMenuItem";
             this.readTheTextToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
             this.readTheTextToolStripMenuItem.Text = "Read The Text";
+            this.readTheTextToolStripMenuItem.Click += new System.EventHandler(this.readTheTextToolStripMenuItem_Click);
             // 
             // textFromFotoToolStripMenuItem
             // 
@@ -541,13 +549,6 @@ namespace testApp
             this.lineNumbers_For_RichTextBox1.Show_MarginLines = false;
             this.lineNumbers_For_RichTextBox1.Size = new System.Drawing.Size(22, 326);
             this.lineNumbers_For_RichTextBox1.TabIndex = 0;
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(241, 26);
-            this.toolStripMenuItem1.Text = "Recognize The Speech";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // MainForm
             // 

@@ -465,6 +465,12 @@ namespace testApp
 			Form recognition = new RecognitionForm();
 			recognition.Show();
         }
+
+        private void readTheTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Form synthesizer = new SynthesizerForm();
+			synthesizer.Show();
+        }
     }
     
 }
