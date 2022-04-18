@@ -471,6 +471,11 @@ namespace testApp
 			Form synthesizer = new SynthesizerForm();
 			synthesizer.Show();
         }
+
+        private void textFromFotoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
