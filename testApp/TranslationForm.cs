@@ -4,10 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Google.Cloud.Translation.V2;
+
 
 namespace testApp
 {
@@ -39,11 +39,13 @@ namespace testApp
         private void timer1_Tick(object sender, EventArgs e)
         {
             richTextBox2.Text = "Translating...";
-            var client = TranslationClient.Create();
+            /*AQAAAABdMRHcAATuwUtWrGGmgkhVrrjXV - OYHio*/
             string text = richTextBox1.Text;
-            string from_lan = LanguageCodes.English;
-            string to_lan = LanguageCodes.Russian;
-            switch(comboBox1.SelectedItem.ToString()){
+            string from_lan;
+            string to_lan;
+            Process process = Process.Start(fileName: )
+            
+            /*switch(comboBox1.SelectedItem.ToString()){
                 case "English":
                     from_lan = LanguageCodes.English;
                     break;
@@ -71,10 +73,10 @@ namespace testApp
                 case "Chinese":
                     to_lan = LanguageCodes.ChineseSimplified;
                     break;
-            }
+            }*/
 
-            var response = client.TranslateText(text, to_lan, from_lan);
-            richTextBox2.Text = response.TranslatedText;
+            /*var response = client.TranslateText(text, to_lan, from_lan);
+            richTextBox2.Text = response.TranslatedText;*/
         }
     }
 }

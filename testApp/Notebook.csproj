@@ -43,33 +43,6 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
   <ItemGroup>
-    <Reference Include="Google.Api.Gax, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3ec5ea7f18953e47, processorArchitecture=MSIL">
-      <HintPath>D:\ПРОГРАММИРОВАНИЕ\C++,C#,C\Notebook\packages\Google.Api.Gax.3.3.0\lib\net461\Google.Api.Gax.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Api.Gax.Rest, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3ec5ea7f18953e47, processorArchitecture=MSIL">
-      <HintPath>D:\ПРОГРАММИРОВАНИЕ\C++,C#,C\Notebook\packages\Google.Api.Gax.Rest.3.3.0\lib\net461\Google.Api.Gax.Rest.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Apis, Version=1.51.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>D:\ПРОГРАММИРОВАНИЕ\C++,C#,C\Notebook\packages\Google.Apis.1.51.0\lib\net45\Google.Apis.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Apis.Auth, Version=1.51.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>D:\ПРОГРАММИРОВАНИЕ\C++,C#,C\Notebook\packages\Google.Apis.Auth.1.51.0\lib\net45\Google.Apis.Auth.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.51.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>D:\ПРОГРАММИРОВАНИЕ\C++,C#,C\Notebook\packages\Google.Apis.Auth.1.51.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Apis.Core, Version=1.51.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>D:\ПРОГРАММИРОВАНИЕ\C++,C#,C\Notebook\packages\Google.Apis.Core.1.51.0\lib\net45\Google.Apis.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Apis.PlatformServices, Version=1.51.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>D:\ПРОГРАММИРОВАНИЕ\C++,C#,C\Notebook\packages\Google.Apis.1.51.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Apis.Translate.v2, Version=1.51.0.875, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>D:\ПРОГРАММИРОВАНИЕ\C++,C#,C\Notebook\packages\Google.Apis.Translate.v2.1.51.0.875\lib\net45\Google.Apis.Translate.v2.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Cloud.Translation.V2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=185c282632e132a0, processorArchitecture=MSIL">
-      <HintPath>D:\ПРОГРАММИРОВАНИЕ\C++,C#,C\Notebook\packages\Google.Cloud.Translation.V2.2.1.0\lib\net461\Google.Cloud.Translation.V2.dll</HintPath>
-    </Reference>
     <Reference Include="IronOcr, Version=2022.3.0.0, Culture=neutral, PublicKeyToken=c2cbcea5ea3f6d8d, processorArchitecture=MSIL">
       <HintPath>D:\ПРОГРАММИРОВАНИЕ\C++,C#,C\Notebook\packages\IronOcr.2022.3.0\lib\net40\IronOcr.dll</HintPath>
     </Reference>
