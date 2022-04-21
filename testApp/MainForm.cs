@@ -474,7 +474,8 @@ namespace testApp
 
         private void textFromFotoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+			ImageForm ocr = new ImageForm();
+			ocr.Show();
         }
     }
     
