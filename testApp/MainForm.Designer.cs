@@ -79,6 +79,7 @@ namespace testApp
             this.readTheTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textFromFotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntoSwitchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.translatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -88,7 +89,6 @@ namespace testApp
             this.NumLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.autocompleteMenu1 = new AutocompleteMenuNS.AutocompleteMenu();
             this.lineNumbers_For_RichTextBox1 = new LineNumbers.LineNumbers_For_RichTextBox();
-            this.translatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -99,9 +99,9 @@ namespace testApp
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Etalon_close});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 30);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 28);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(721, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(721, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -126,7 +126,7 @@ namespace testApp
             this.helpToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(721, 30);
+            this.menuStrip2.Size = new System.Drawing.Size(721, 28);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -140,7 +140,7 @@ namespace testApp
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
@@ -200,7 +200,7 @@ namespace testApp
             this.selectAllToolStripMenuItem,
             this.timeToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // undoToolStripMenuItem
@@ -299,7 +299,7 @@ namespace testApp
             this.statusStripToolStripMenuItem,
             this.wordWrapToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // themeToolStripMenuItem
@@ -403,7 +403,7 @@ namespace testApp
             this.puntoSwitchToolStripMenuItem,
             this.translatorToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
             // autocompleteToolStripMenuItem
@@ -439,11 +439,18 @@ namespace testApp
             this.puntoSwitchToolStripMenuItem.Name = "puntoSwitchToolStripMenuItem";
             this.puntoSwitchToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
             this.puntoSwitchToolStripMenuItem.Text = "Punto Switch";
+            this.puntoSwitchToolStripMenuItem.Click += new System.EventHandler(this.puntoSwitchToolStripMenuItem_Click);
+            // 
+            // translatorToolStripMenuItem
+            // 
+            this.translatorToolStripMenuItem.Name = "translatorToolStripMenuItem";
+            this.translatorToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.translatorToolStripMenuItem.Text = "Translator";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // richTextBox1
@@ -552,12 +559,6 @@ namespace testApp
             this.lineNumbers_For_RichTextBox1.Show_MarginLines = false;
             this.lineNumbers_For_RichTextBox1.Size = new System.Drawing.Size(22, 326);
             this.lineNumbers_For_RichTextBox1.TabIndex = 0;
-            // 
-            // translatorToolStripMenuItem
-            // 
-            this.translatorToolStripMenuItem.Name = "translatorToolStripMenuItem";
-            this.translatorToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
-            this.translatorToolStripMenuItem.Text = "Translator";
             // 
             // MainForm
             // 

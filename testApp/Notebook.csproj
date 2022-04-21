@@ -232,6 +232,12 @@
     <Compile Include="RecognitionForm.Designer.cs">
       <DependentUpon>RecognitionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SwitchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SwitchForm.Designer.cs">
+      <DependentUpon>SwitchForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SynthesizerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReplaceForm.resx">
       <DependentUpon>ReplaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SwitchForm.resx">
+      <DependentUpon>SwitchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SynthesizerForm.resx">
       <DependentUpon>SynthesizerForm.cs</DependentUpon>

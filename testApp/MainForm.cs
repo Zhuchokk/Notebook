@@ -477,6 +477,14 @@ namespace testApp
 			ImageForm ocr = new ImageForm();
 			ocr.Show();
         }
+
+        private void puntoSwitchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Active func;
+			func = this.Activate;
+			SwitchForm switchForm = new SwitchForm(ref richTextBox1, func);
+			switchForm.Show();
+        }
     }
     
 }
