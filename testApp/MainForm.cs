@@ -215,7 +215,7 @@ namespace testApp
 			int free = 1;
 			foreach (ToolStripMenuItem i in menuStrip1.Items)
             {
-				if(i.Tag == Convert.ToString(free))
+				if(i.Tag.ToString() == Convert.ToString(free))
                 {
 					free += 1;
                 }
@@ -484,6 +484,11 @@ namespace testApp
 			func = this.Activate;
 			SwitchForm switchForm = new SwitchForm(ref richTextBox1, func);
 			switchForm.Show();
+        }
+
+        private void translatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

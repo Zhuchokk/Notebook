@@ -446,6 +446,7 @@ namespace testApp
             this.translatorToolStripMenuItem.Name = "translatorToolStripMenuItem";
             this.translatorToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
             this.translatorToolStripMenuItem.Text = "Translator";
+            this.translatorToolStripMenuItem.Click += new System.EventHandler(this.translatorToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 

@@ -101,11 +101,6 @@ namespace testApp
             InitializeComponent();
             box = textBox;
             active = a;
-            foreach(var key in layout)
-            {
-                Console.WriteLine("{'" + key.Value + "', '" + key.Key + "'}");
-
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
