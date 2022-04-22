@@ -30,6 +30,7 @@ namespace testApp
 			settings = new SettingsJson().fromJson(Jsonfile);
 			preparing();
 			menuStrip2.Renderer = new ToolStripProfessionalRenderer(new CustomProfessionalColors());
+			menuStrip1.Renderer = new ToolStripProfessionalRenderer(new CustomProfessionalColors2());
 
 		}
 
@@ -54,6 +55,12 @@ namespace testApp
 
 				menuStrip2.BackColor = theme.menustrip_back;
 				menuStrip2.ForeColor = theme.menustrip_text;
+
+				toolStripStatusLabel2.BackColor = theme.menustrip_sepator;
+				toolStripStatusLabel2.ForeColor = theme.menustrip_sepator;
+				
+
+				BackColor = theme.richbox_back;
 				foreach(ToolStripMenuItem i in menuStrip2.Items)
                 {
 					i.BackColor = theme.menustrip_item_back;
@@ -63,6 +70,16 @@ namespace testApp
 						
 						i.DropDownItems[j].BackColor = theme.menustrip_item_back;
 						i.DropDownItems[j].ForeColor = theme.menustrip_item_text;
+                        try
+                        {
+							var s = (ToolStripMenuItem)i.DropDownItems[j];
+							foreach (ToolStripMenuItem z in s.DropDownItems)
+							{
+								z.BackColor = theme.menustrip_item_back;
+								z.ForeColor = theme.menustrip_item_text;
+							}
+						}
+                        catch { }
 					}
                 }
 				
@@ -568,37 +585,41 @@ namespace testApp
 		{ get { return Color.FromArgb(51, 51, 52); } }
 
 		public override Color MenuBorder
-		{ get { return Color.Black; } }
+		{ get { return Color.Transparent; } }
 
-		//fill màu item của menu khi mouse enter
 		public override Color MenuItemSelectedGradientBegin
 		{ get { return Color.FromArgb(64, 64, 66); } }
 
 		public override Color MenuItemSelectedGradientEnd
 		{ get { return Color.FromArgb(64, 64, 66); } }
 
-		// chọn màu viền menu item khi mouse enter
 		public override Color MenuItemBorder
 		{ get { return Color.FromArgb(51, 51, 52); } }
 
-		// fill màu nút item của menu khi dc nhấn
 		public override Color MenuItemPressedGradientBegin
 		{ get { return Color.FromArgb(27, 27, 28); } }
 
 		public override Color MenuItemPressedGradientEnd
 		{ get { return Color.FromArgb(27, 27, 28); } }
 
-		// fill màu thanh menu strip
-		public override Color MenuStripGradientBegin
-		{ get { return Color.FromArgb(51, 51, 52); } }
+        public override Color MenuStripGradientBegin
+        { get { return Color.FromArgb(51, 51, 52); } }
 
-		public override Color MenuStripGradientEnd
+        public override Color MenuStripGradientEnd
 		{ get { return Color.FromArgb(51, 51, 52); } }
 
 		public override Color ToolStripDropDownBackground
 		{
-			get { return Color.FromArgb(90, 93, 95); }
+			get { return Color.FromArgb(60, 63, 65); }
 		}
 	}
+	class CustomProfessionalColors2 : CustomProfessionalColors
+	{
+		public override Color MenuItemSelectedGradientBegin
+		{ get { return Color.FromArgb(78, 82, 84); } }
 
+		public override Color MenuItemSelectedGradientEnd
+		{ get { return Color.FromArgb(78, 82, 84); } }
+
+	}
 }

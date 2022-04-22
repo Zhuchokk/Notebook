@@ -99,9 +99,9 @@ namespace testApp
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Etalon_close});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 30);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 28);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(721, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(721, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -126,7 +126,7 @@ namespace testApp
             this.helpToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(721, 30);
+            this.menuStrip2.Size = new System.Drawing.Size(721, 28);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -140,7 +140,7 @@ namespace testApp
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
@@ -195,7 +195,7 @@ namespace testApp
             this.selectAllToolStripMenuItem,
             this.timeToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // undoToolStripMenuItem
@@ -279,7 +279,7 @@ namespace testApp
             this.statusStripToolStripMenuItem,
             this.wordWrapToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // themeToolStripMenuItem
@@ -378,7 +378,7 @@ namespace testApp
             this.puntoSwitchToolStripMenuItem,
             this.translatorToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
             // autocompleteToolStripMenuItem
@@ -426,7 +426,7 @@ namespace testApp
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // richTextBox1
@@ -435,6 +435,7 @@ namespace testApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.autocompleteMenu1.SetAutocompleteMenu(this.richTextBox1, this.autocompleteMenu1);
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Location = new System.Drawing.Point(27, 56);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(694, 326);
@@ -472,8 +473,10 @@ namespace testApp
             // 
             // toolStripStatusLabel2
             // 
+            this.toolStripStatusLabel2.BackColor = System.Drawing.SystemColors.Window;
             this.toolStripStatusLabel2.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.toolStripStatusLabel2.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
+            this.toolStripStatusLabel2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(4, 20);
             // 
@@ -502,7 +505,7 @@ namespace testApp
             // 
             this.lineNumbers_For_RichTextBox1._SeeThroughMode_ = false;
             this.lineNumbers_For_RichTextBox1.AutoSizing = true;
-            this.lineNumbers_For_RichTextBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lineNumbers_For_RichTextBox1.BackColor = System.Drawing.Color.Transparent;
             this.lineNumbers_For_RichTextBox1.BackgroundGradient_AlphaColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lineNumbers_For_RichTextBox1.BackgroundGradient_BetaColor = System.Drawing.Color.LightSteelBlue;
             this.lineNumbers_For_RichTextBox1.BackgroundGradient_Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
@@ -517,7 +520,7 @@ namespace testApp
             this.lineNumbers_For_RichTextBox1.LineNrs_AntiAlias = true;
             this.lineNumbers_For_RichTextBox1.LineNrs_AsHexadecimal = false;
             this.lineNumbers_For_RichTextBox1.LineNrs_ClippedByItemRectangle = true;
-            this.lineNumbers_For_RichTextBox1.LineNrs_LeadingZeroes = true;
+            this.lineNumbers_For_RichTextBox1.LineNrs_LeadingZeroes = false;
             this.lineNumbers_For_RichTextBox1.LineNrs_Offset = new System.Drawing.Size(0, 0);
             this.lineNumbers_For_RichTextBox1.Location = new System.Drawing.Point(4, 56);
             this.lineNumbers_For_RichTextBox1.Margin = new System.Windows.Forms.Padding(0);
@@ -526,7 +529,7 @@ namespace testApp
             this.lineNumbers_For_RichTextBox1.MarginLines_Style = System.Drawing.Drawing2D.DashStyle.Dash;
             this.lineNumbers_For_RichTextBox1.MarginLines_Thickness = 1F;
             this.lineNumbers_For_RichTextBox1.Name = "lineNumbers_For_RichTextBox1";
-            this.lineNumbers_For_RichTextBox1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.lineNumbers_For_RichTextBox1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.lineNumbers_For_RichTextBox1.ParentRichTextBox = this.richTextBox1;
             this.lineNumbers_For_RichTextBox1.Show_BackgroundGradient = false;
             this.lineNumbers_For_RichTextBox1.Show_BorderLines = false;
@@ -571,7 +574,7 @@ namespace testApp
             this.Controls.Add(this.lineNumbers_For_RichTextBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStrip2;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Notebook";
