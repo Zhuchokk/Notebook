@@ -28,6 +28,61 @@ namespace testApp
 			preparing();
 		}
 
+		public void install_theme_mainform()
+		{
+			
+			if (settings.theme.ToLower() == "black")
+			{
+				BlackTheme theme = new BlackTheme();
+				richTextBox1.BackColor = theme.richbox_back;
+				richTextBox1.ForeColor = theme.richbox_text;
+
+				lineNumbers_For_RichTextBox1.BackColor = theme.numbar_back;
+				lineNumbers_For_RichTextBox1.ForeColor = theme.numbar_text;
+
+				menuStrip1.BackColor = theme.filestrip_back;
+				menuStrip1.ForeColor = theme.filestrip_text;
+				Etalon_close.ForeColor = theme.filestrip_close;
+
+				statusStrip1.BackColor = theme.statusstrip_back;
+				statusStrip1.ForeColor = theme.statusstrip_text;
+
+				menuStrip2.BackColor = theme.menustrip_back;
+				menuStrip2.ForeColor = theme.menustrip_text;
+				foreach(ToolStripMenuItem i in menuStrip2.Items)
+                {
+					i.BackColor = theme.menustrip_item_back;
+					i.ForeColor = theme.menustrip_item_text;
+                }
+				
+			}
+			else
+			{
+				WhiteTheme theme = new WhiteTheme();
+			}
+
+		}
+		public Color get_selected_file_color()
+        {
+			if(settings.theme.ToLower() == "black")
+            {
+				BlackTheme btheme = new BlackTheme();
+				return btheme.filestrip_selected;
+            }
+			WhiteTheme theme = new WhiteTheme();
+			return theme.filestrip_selected;
+        }
+		public Color get_unselected_file_color()
+		{
+			if (settings.theme.ToLower() == "black")
+			{
+				BlackTheme btheme = new BlackTheme();
+				return btheme.filestrip_back;
+			}
+			WhiteTheme theme = new WhiteTheme();
+			return theme.filestrip_back;
+		}
+
 		private void preparing()
         {
 			for (int i = 0; i < settings.used_files.Length; i++)
@@ -70,7 +125,6 @@ namespace testApp
 				close.Tag = 1;
 				select_file(0);
 			}
-
 			//тема
 			richTextBox1.ZoomFactor = settings.zoom;
 			richTextBox1.Font = settings.font;
@@ -141,8 +195,8 @@ namespace testApp
         {
 			for(int i=0; i < textfiles.Length; i++)
             {
-                if (i == ind) { textfiles[i].selected = true; open = true; richTextBox1.Text = textfiles[i].text; index = i; textfiles[i].item.BackColor = SystemColors.ControlDark; textfiles[i].close.BackColor = SystemColors.ControlDark; } 
-				else { textfiles[i].selected = false; textfiles[i].item.BackColor = SystemColors.Control; textfiles[i].close.BackColor = SystemColors.Control; }
+                if (i == ind) { textfiles[i].selected = true; open = true; richTextBox1.Text = textfiles[i].text; index = i; textfiles[i].item.BackColor = get_selected_file_color(); textfiles[i].close.BackColor = get_selected_file_color(); } 
+				else { textfiles[i].selected = false; textfiles[i].item.BackColor = get_unselected_file_color(); textfiles[i].close.BackColor = get_unselected_file_color(); }
             }
 			
         }

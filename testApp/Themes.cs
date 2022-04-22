@@ -3,9 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace testApp
 {
+    class ThemeFunctions
+    {
+        public static void install_theme_mainform(string choosed_theme,  ref MainForm mainform)
+        {
+            /*ref RichTextBox richtextbox, ref LineNumbers.LineNumbers_For_RichTextBox numbar, ref MenuStrip filestrip,*/
+            if (choosed_theme.ToLower() == "black")
+            {
+                BlackTheme theme = new BlackTheme();
+                mainform.richTextBox1.BackColor = theme.richbox_back;
+                mainform.richTextBox1.ForeColor = theme.richbox_text;
+            }
+            else
+            {
+                WhiteTheme theme = new WhiteTheme();
+            }
+            
+        }
+    }
+
     class BlackTheme
     {
         public Color richbox_back = Color.FromArgb(43, 43, 43);
@@ -38,6 +58,10 @@ namespace testApp
 
         // дописать остальное. И написать класс WhiteTheme эндетичный этому. Эти классы будут выполнять роль словаря
 
+
+    }
+    class WhiteTheme
+    {
 
     }
 }
