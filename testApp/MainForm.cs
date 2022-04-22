@@ -215,7 +215,7 @@ namespace testApp
 			int free = 1;
 			foreach (ToolStripMenuItem i in menuStrip1.Items)
             {
-				if(i.Tag.ToString() == Convert.ToString(free))
+				if(i.Tag == Convert.ToString(free))
                 {
 					free += 1;
                 }

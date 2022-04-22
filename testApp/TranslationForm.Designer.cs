@@ -45,12 +45,13 @@ namespace testApp
             "English",
             "Russian",
             "Spanish",
-            "Chinese"});
+            "Deutsch"});
             this.comboBox1.Location = new System.Drawing.Point(16, 15);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(163, 24);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Text = "English";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.combobox_changed);
             // 
             // button1
             // 
@@ -75,12 +76,13 @@ namespace testApp
             "English",
             "Russian",
             "Spanish",
-            "Chinese"});
+            "Deutsch"});
             this.comboBox2.Location = new System.Drawing.Point(215, 15);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(165, 24);
             this.comboBox2.TabIndex = 2;
             this.comboBox2.Text = "Russian";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.combobox_changed);
             // 
             // richTextBox1
             // 
@@ -123,7 +125,7 @@ namespace testApp
             this.Name = "TranslationForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "TranslationForm";
+            this.Text = "Translator";
             this.ResumeLayout(false);
 
         }
