@@ -46,7 +46,7 @@ namespace testApp
         public Color menustrip_text = Color.FromArgb(187, 187, 187);
         public Color menustrip_item_back = Color.FromArgb(60, 63, 65);
         public Color menustrip_item_text = Color.FromArgb(187, 187, 187);
-        public Color menustrip_sepator = Color.FromArgb(81, 81, 81);
+        public Color menustrip_sepator = Color.FromArgb(81, 81, 81); //located in renders
 
         public Color child_form_back = Color.FromArgb(60, 63, 65);
         public Color child_form_text = Color.FromArgb(187, 187, 187);

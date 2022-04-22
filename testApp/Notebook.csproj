@@ -226,6 +226,9 @@
     <Compile Include="AutocompleteForm.Designer.cs">
       <DependentUpon>AutocompleteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExtendedToolStripSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ImageForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -12,10 +12,12 @@ namespace testApp
 	/// </summary>
 	public delegate void Active();
 
+	
+
 	public partial class MainForm : Form
 	{
 		public Textfile[] textfiles = { };
-		Settings settings = new Settings();
+		public Settings settings = new Settings();
 		string Jsonfile = Application.StartupPath + @"\settings.json";
 		int index = 0;
 		bool open = false;
@@ -23,9 +25,12 @@ namespace testApp
 
 		public MainForm()
 		{
+			
 			InitializeComponent();
 			settings = new SettingsJson().fromJson(Jsonfile);
 			preparing();
+			menuStrip2.Renderer = new ToolStripProfessionalRenderer(new CustomProfessionalColors());
+
 		}
 
 		public void install_theme_mainform()
@@ -53,6 +58,12 @@ namespace testApp
                 {
 					i.BackColor = theme.menustrip_item_back;
 					i.ForeColor = theme.menustrip_item_text;
+					for(int j=0; j < i.DropDownItems.Count; j++)
+                    {
+						
+						i.DropDownItems[j].BackColor = theme.menustrip_item_back;
+						i.DropDownItems[j].ForeColor = theme.menustrip_item_text;
+					}
                 }
 				
 			}
@@ -70,7 +81,8 @@ namespace testApp
 				return btheme.filestrip_selected;
             }
 			WhiteTheme theme = new WhiteTheme();
-			return theme.filestrip_selected;
+			return Color.White;
+			/*return theme.filestrip_selected;*/
         }
 		public Color get_unselected_file_color()
 		{
@@ -80,7 +92,9 @@ namespace testApp
 				return btheme.filestrip_back;
 			}
 			WhiteTheme theme = new WhiteTheme();
-			return theme.filestrip_back;
+			return Color.White;
+
+			/*return theme.filestrip_back;*/
 		}
 
 		private void preparing()
@@ -125,7 +139,8 @@ namespace testApp
 				close.Tag = 1;
 				select_file(0);
 			}
-			//тема
+			install_theme_mainform();
+
 			richTextBox1.ZoomFactor = settings.zoom;
 			richTextBox1.Font = settings.font;
 			lineNumbers_For_RichTextBox1.Visible = settings.numbar;
@@ -545,6 +560,45 @@ namespace testApp
 			TranslationForm translation = new TranslationForm();
 			translation.Show();
 		}
+
     }
-    
+	class CustomProfessionalColors : ProfessionalColorTable
+	{
+		public override Color MenuItemSelected
+		{ get { return Color.FromArgb(51, 51, 52); } }
+
+		public override Color MenuBorder
+		{ get { return Color.Black; } }
+
+		//fill màu item của menu khi mouse enter
+		public override Color MenuItemSelectedGradientBegin
+		{ get { return Color.FromArgb(64, 64, 66); } }
+
+		public override Color MenuItemSelectedGradientEnd
+		{ get { return Color.FromArgb(64, 64, 66); } }
+
+		// chọn màu viền menu item khi mouse enter
+		public override Color MenuItemBorder
+		{ get { return Color.FromArgb(51, 51, 52); } }
+
+		// fill màu nút item của menu khi dc nhấn
+		public override Color MenuItemPressedGradientBegin
+		{ get { return Color.FromArgb(27, 27, 28); } }
+
+		public override Color MenuItemPressedGradientEnd
+		{ get { return Color.FromArgb(27, 27, 28); } }
+
+		// fill màu thanh menu strip
+		public override Color MenuStripGradientBegin
+		{ get { return Color.FromArgb(51, 51, 52); } }
+
+		public override Color MenuStripGradientEnd
+		{ get { return Color.FromArgb(51, 51, 52); } }
+
+		public override Color ToolStripDropDownBackground
+		{
+			get { return Color.FromArgb(90, 93, 95); }
+		}
+	}
+
 }
