@@ -584,7 +584,7 @@ namespace testApp
 			Font font = new Font(lineNumbers_For_RichTextBox1.Font.FontFamily, (float)(richTextBox1.Font.Size * richTextBox1.ZoomFactor));
 
 			lineNumbers_For_RichTextBox1.Font = font;
-			Console.WriteLine(lineNumbers_For_RichTextBox1.Font.Size);
+			settings.zoom = richTextBox1.ZoomFactor;
 
 		}
         private void restoreDefaultZoomToolStripMenuItem_Click(object sender, EventArgs e)
@@ -598,13 +598,35 @@ namespace testApp
 			FontDialog fontDialog = new FontDialog();
 			fontDialog.ShowDialog();
 			Font font = fontDialog.Font;
+			richTextBox1.Font = font;
+			lineNumbers_For_RichTextBox1.Font = font;
+			settings.font = font;
 
-		} //закончить
+		} 
 
         private void numbarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+			lineNumbers_For_RichTextBox1.Visible = !numbarToolStripMenuItem.Checked;
+			lineNumbers_For_RichTextBox1.Enabled = !numbarToolStripMenuItem.Checked;
+			settings.numbar = !numbarToolStripMenuItem.Checked;
+			numbarToolStripMenuItem.Checked = !numbarToolStripMenuItem.Checked;
 
-        } //закончить
+            if (!numbarToolStripMenuItem.Checked)
+            {
+				richTextBox1.Dock = DockStyle.Fill;
+            }
+            else
+            {
+				richTextBox1.Dock = DockStyle.Right;
+				richTextBox1.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
+				
+			}
+			richTextBox1.Update();
+			lineNumbers_For_RichTextBox1_Resize(sender, e);
+
+			/*if ()*/
+
+		} //закончить
 
         private void toolStripToolStripMenuItem_Click(object sender, EventArgs e)
         {
