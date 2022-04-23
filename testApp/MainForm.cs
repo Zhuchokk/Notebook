@@ -21,9 +21,6 @@ namespace testApp
 		string Jsonfile = Application.StartupPath + @"\settings.json";
 		int index = 0;
 		bool open = false;
-		Point oldPos;
-		bool isDragging = false;
-		Point oldMouse;
 
 
 		public MainForm()
@@ -594,27 +591,7 @@ namespace testApp
 
         }
 
-        private void menuStrip2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isDragging)
-            {
-				this.Location = new Point(oldPos.X + (e.X - oldMouse.X), oldPos.Y + (e.Y - oldMouse.Y));
-				/*oldPos = Location;
-				oldMouse = e.Location;*/
-			}
-        }
 
-        private void menuStrip2_MouseDown(object sender, MouseEventArgs e)
-        {
-			this.isDragging = true;
-			this.oldPos = this.Location;
-			this.oldMouse = e.Location;
-		}
-
-        private void menuStrip2_MouseUp(object sender, MouseEventArgs e)
-        {
-			this.isDragging = false;
-        }
     }
 	
 }
