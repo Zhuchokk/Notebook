@@ -21,6 +21,9 @@ namespace testApp
 		string Jsonfile = Application.StartupPath + @"\settings.json";
 		int index = 0;
 		bool open = false;
+		Point oldPos;
+		bool isDragging = false;
+		Point oldMouse;
 
 
 		public MainForm()
@@ -266,11 +269,11 @@ namespace testApp
                     {
 						
 						richTextBox1.Text = "";
-						richTextBox1.Enabled = false;
+						richTextBox1.ReadOnly = true;
                     }
                     else
                     {
-						richTextBox1.Enabled = true;
+						richTextBox1.ReadOnly = false;
 						select_file(0);
 						/*richTextBox1.Text = textfiles[0].text;*/
                     }
@@ -314,7 +317,7 @@ namespace testApp
 			Array.Resize(ref textfiles, textfiles.Length + 1);
 			textfiles[textfiles.Length - 1] = new Textfile(ref richTextBox1,ref menuStrip1, ref s, ref close);
 			select_file(textfiles.Length - 1);
-			richTextBox1.Enabled = true;
+			richTextBox1.ReadOnly = false;
 			position();
 		}
 
@@ -360,7 +363,7 @@ namespace testApp
 			close.Tag = textfiles[index].path;
 			richTextBox1.Text = textfiles[index].text;
 			textfiles[index].change(false);
-			richTextBox1.Enabled = true;
+			richTextBox1.ReadOnly = false;
 			position();
 		}
 		private void menuitem_clicked(object sender, EventArgs e)
@@ -586,9 +589,31 @@ namespace testApp
 			Point tmp = new Point(lineNumbers_For_RichTextBox1.Size.Width + lineNumbers_For_RichTextBox1.Location.X, 51);
 			Size size = new Size(richTextBox1.Size.Width - (tmp.X + richTextBox1.Size.Width - this.Width+ 15), richTextBox1.Size.Height);
 			richTextBox1.Location = tmp;
-			Console.WriteLine(lineNumbers_For_RichTextBox1.Size.Width + lineNumbers_For_RichTextBox1.Location.X + " " + richTextBox1.Location.X);
+			/*Console.WriteLine(lineNumbers_For_RichTextBox1.Size.Width + lineNumbers_For_RichTextBox1.Location.X + " " + richTextBox1.Location.X);*/
 			richTextBox1.Size = size;
 
+        }
+
+        private void menuStrip2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+				this.Location = new Point(oldPos.X + (e.X - oldMouse.X), oldPos.Y + (e.Y - oldMouse.Y));
+				/*oldPos = Location;
+				oldMouse = e.Location;*/
+			}
+        }
+
+        private void menuStrip2_MouseDown(object sender, MouseEventArgs e)
+        {
+			this.isDragging = true;
+			this.oldPos = this.Location;
+			this.oldMouse = e.Location;
+		}
+
+        private void menuStrip2_MouseUp(object sender, MouseEventArgs e)
+        {
+			this.isDragging = false;
         }
     }
 	
