@@ -370,12 +370,14 @@ namespace testApp
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+			if(textfiles.Length == 0) { return; }
 			textfiles[index].text = richTextBox1.Text;
 			textfiles[index].save();
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+			if(textfiles.Length == 0) { return; }
 			textfiles[index].text = richTextBox1.Text;
 			textfiles[index].save_as();
 		}
@@ -547,6 +549,8 @@ namespace testApp
 			if(richTextBox1.ZoomFactor + 0.1 <= 5)
             {
 				richTextBox1.ZoomFactor = (float)(richTextBox1.ZoomFactor + 0.1);
+				
+
 				zoom();
 			}
 			
@@ -562,8 +566,13 @@ namespace testApp
 		}
 		private void zoom()
         {
-			ZoomLabel.Text = Convert.ToString(richTextBox1.ZoomFactor * 100) + "%";
-        }
+			ZoomLabel.Text = Convert.ToString((int)(richTextBox1.ZoomFactor * 100)) + "%";
+			Font font = new Font(lineNumbers_For_RichTextBox1.Font.FontFamily, (float)(richTextBox1.Font.Size * richTextBox1.ZoomFactor));
+
+			lineNumbers_For_RichTextBox1.Font = font;
+			Console.WriteLine(lineNumbers_For_RichTextBox1.Font.Size);
+
+		}
         private void restoreDefaultZoomToolStripMenuItem_Click(object sender, EventArgs e)
         {
 			richTextBox1.ZoomFactor = 1;
