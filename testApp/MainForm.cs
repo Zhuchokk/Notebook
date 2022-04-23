@@ -72,6 +72,12 @@ namespace testApp
 				Etalon_close.Image = Image.FromFile("krestik_black.png");
 				BackColor = theme.filestrip_back;
 
+				autocompleteMenu1.Colors.BackColor = theme.complete_back;
+				autocompleteMenu1.Colors.ForeColor = theme.complete_text;
+				autocompleteMenu1.Colors.HighlightingColor = theme.highlight_complete;
+				autocompleteMenu1.Colors.SelectedBackColor = theme.complete_selected_back;
+				autocompleteMenu1.Colors.SelectedForeColor = theme.complete_selected_text;
+
                 foreach (ToolStripMenuItem i in menuStrip2.Items)
                 {
 					i.BackColor = theme.menustrip_item_back;
@@ -119,6 +125,12 @@ namespace testApp
 
 				Etalon_close.Image = Image.FromFile("krestik_white.png");
 				BackColor = theme.filestrip_back;
+
+				autocompleteMenu1.Colors.BackColor = theme.complete_back;
+				autocompleteMenu1.Colors.ForeColor = theme.complete_text;
+				autocompleteMenu1.Colors.HighlightingColor = theme.highlight_complete;
+				autocompleteMenu1.Colors.SelectedBackColor = theme.complete_selected_back;
+				autocompleteMenu1.Colors.SelectedForeColor = theme.complete_selected_text;
 
 				foreach (ToolStripMenuItem i in menuStrip2.Items)
 				{

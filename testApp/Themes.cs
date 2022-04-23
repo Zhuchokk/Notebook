@@ -56,7 +56,12 @@ namespace testApp
         public Color child_form_but_clicked = Color.FromArgb(70, 109, 148);
         public Color child_form_entry_back = Color.FromArgb(69, 73, 74);
 
-        // дописать остальное. И написать класс WhiteTheme эндетичный этому. Эти классы будут выполнять роль словаря
+
+        public Color complete_back = Color.FromArgb(70, 72, 74);
+        public Color complete_text = Color.FromArgb(187, 187, 187);
+        public Color complete_selected_text = Color.FromArgb(71, 86, 81);
+        public Color complete_selected_back = Color.FromArgb(181, 184, 187);
+        public Color highlight_complete = Color.FromArgb(68, 186, 239);
 
 
     }
@@ -89,5 +94,11 @@ namespace testApp
         public Color child_form_but_text = Color.FromArgb(0, 0, 0);
         public Color child_form_but_clicked = Color.FromArgb(7, 132, 222);
         public Color child_form_entry_back = Color.FromArgb(255, 255, 255);
+
+        public Color complete_back = Color.FromArgb(247, 247, 247);
+        public Color complete_text = Color.FromArgb(0, 0, 0);
+        public Color complete_selected_text = Color.FromArgb(0, 0, 0);
+        public Color complete_selected_back = Color.FromArgb(224, 224, 224);
+        public Color highlight_complete = Color.FromArgb(68, 186, 239);
     }
 }
