@@ -62,6 +62,32 @@ namespace testApp
     }
     class WhiteTheme
     {
+        public Color richbox_back = Color.FromArgb(255, 255, 255);
+        public Color richbox_text = Color.FromArgb(0, 0, 0);
 
+        public Color numbar_back = Color.FromArgb(240, 240, 240);
+        public Color numbar_text = Color.FromArgb(153, 153, 153);
+
+        public Color filestrip_back = Color.FromArgb(242, 242, 242);
+        public Color filestrip_selected = Color.FromArgb(250, 250, 250);
+        public Color filestrip_close = Color.FromArgb(189, 195, 198);
+        public Color filestrip_text = Color.FromArgb(0, 0, 0);
+
+        public Color statusstrip_back = Color.FromArgb(242,242, 242);
+        public Color statusstrip_text = Color.FromArgb(0, 0, 0);
+
+        public Color menustrip_back = Color.FromArgb(242, 242, 242);
+        public Color menustrip_text = Color.FromArgb(0, 0, 0);
+        public Color menustrip_item_back = Color.FromArgb(242, 242,242);
+        public Color menustrip_item_text = Color.FromArgb(0, 0, 0);
+        public Color menustrip_sepator = Color.FromArgb(205, 205, 205); //located in renders
+
+        public Color child_form_back = Color.FromArgb(242, 242, 242);
+        public Color child_form_text = Color.FromArgb(0, 0, 0);
+        public Color child_form_close = Color.FromArgb(7, 9, 10);
+        public Color child_form_but_back = Color.FromArgb(227, 227, 227);
+        public Color child_form_but_text = Color.FromArgb(0, 0, 0);
+        public Color child_form_but_clicked = Color.FromArgb(7, 132, 222);
+        public Color child_form_entry_back = Color.FromArgb(255, 255, 255);
     }
 }

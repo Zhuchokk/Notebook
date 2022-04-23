@@ -61,7 +61,6 @@ namespace testApp
 
 
 				BackColor = theme.filestrip_back;
-                /*icon.Image = Image.FromFile(settings.theme + "_ico.png");*/
 
                 foreach (ToolStripMenuItem i in menuStrip2.Items)
                 {
@@ -89,6 +88,50 @@ namespace testApp
 			else
 			{
 				WhiteTheme theme = new WhiteTheme();
+				BlackTheme theme = new BlackTheme();
+				richTextBox1.BackColor = theme.richbox_back;
+				richTextBox1.ForeColor = theme.richbox_text;
+
+				lineNumbers_For_RichTextBox1.BackColor = theme.numbar_back;
+				lineNumbers_For_RichTextBox1.ForeColor = theme.numbar_text;
+
+				menuStrip1.BackColor = theme.filestrip_back;
+				menuStrip1.ForeColor = theme.filestrip_text;
+				Etalon_close.ForeColor = theme.filestrip_close;
+
+				statusStrip1.BackColor = theme.statusstrip_back;
+				statusStrip1.ForeColor = theme.statusstrip_text;
+
+				menuStrip2.BackColor = theme.menustrip_back;
+				menuStrip2.ForeColor = theme.menustrip_text;
+
+				toolStripStatusLabel2.BackColor = theme.menustrip_sepator;
+				toolStripStatusLabel2.ForeColor = theme.menustrip_sepator;
+
+
+				BackColor = theme.filestrip_back;
+
+				foreach (ToolStripMenuItem i in menuStrip2.Items)
+				{
+					i.BackColor = theme.menustrip_item_back;
+					i.ForeColor = theme.menustrip_item_text;
+					for (int j = 0; j < i.DropDownItems.Count; j++)
+					{
+
+						i.DropDownItems[j].BackColor = theme.menustrip_item_back;
+						i.DropDownItems[j].ForeColor = theme.menustrip_item_text;
+						try
+						{
+							var s = (ToolStripMenuItem)i.DropDownItems[j];
+							foreach (ToolStripMenuItem z in s.DropDownItems)
+							{
+								z.BackColor = theme.menustrip_item_back;
+								z.ForeColor = theme.menustrip_item_text;
+							}
+						}
+						catch { }
+					}
+				}
 			}
 
 		}
