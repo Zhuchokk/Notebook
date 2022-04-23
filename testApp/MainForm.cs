@@ -69,7 +69,7 @@ namespace testApp
 				toolStripStatusLabel2.BackColor = theme.menustrip_sepator;
 				toolStripStatusLabel2.ForeColor = theme.menustrip_sepator;
 
-
+				Etalon_close.Image = Image.FromFile("krestik_black.png");
 				BackColor = theme.filestrip_back;
 
                 foreach (ToolStripMenuItem i in menuStrip2.Items)
@@ -117,7 +117,7 @@ namespace testApp
 				toolStripStatusLabel2.BackColor = theme.menustrip_sepator;
 				toolStripStatusLabel2.ForeColor = theme.menustrip_sepator;
 
-
+				Etalon_close.Image = Image.FromFile("krestik_white.png");
 				BackColor = theme.filestrip_back;
 
 				foreach (ToolStripMenuItem i in menuStrip2.Items)
@@ -168,6 +168,8 @@ namespace testApp
 
 		private void preparing()
         {
+			install_theme_mainform();
+
 			for (int i = 0; i < settings.used_files.Length; i++)
 			{
 				if (!File.Exists(settings.used_files[i])) { continue; }
@@ -208,7 +210,7 @@ namespace testApp
 				close.Tag = 1;
 				select_file(0);
 			}
-			install_theme_mainform();
+			
 
 			richTextBox1.ZoomFactor = settings.zoom;
 			richTextBox1.Font = settings.font;
@@ -576,6 +578,7 @@ namespace testApp
         private void restoreDefaultZoomToolStripMenuItem_Click(object sender, EventArgs e)
         {
 			richTextBox1.ZoomFactor = 1;
+			zoom();
         }
 
         private void fontToolStripMenuItem_Click(object sender, EventArgs e)
