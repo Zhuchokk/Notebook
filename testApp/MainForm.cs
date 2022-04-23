@@ -29,8 +29,18 @@ namespace testApp
 			InitializeComponent();
 			settings = new SettingsJson().fromJson(Jsonfile);
 			preparing();
-			menuStrip2.Renderer = new ToolStripProfessionalRenderer(new Black_CustomProfessionalColors());
-			menuStrip1.Renderer = new ToolStripProfessionalRenderer(new Black_CustomProfessionalColors_files());
+			if(settings.theme.ToLower() == "black")
+            {
+				menuStrip2.Renderer = new ToolStripProfessionalRenderer(new Black_CustomProfessionalColors());
+				menuStrip1.Renderer = new ToolStripProfessionalRenderer(new Black_CustomProfessionalColors_files());
+			}
+            else
+            {
+
+				menuStrip2.Renderer = new ToolStripProfessionalRenderer(new White_CustomProfessionalColors());
+				menuStrip1.Renderer = new ToolStripProfessionalRenderer(new White_CustomProfessionalColors_files());
+			}
+			
 
 		}
 
@@ -88,7 +98,6 @@ namespace testApp
 			else
 			{
 				WhiteTheme theme = new WhiteTheme();
-				BlackTheme theme = new BlackTheme();
 				richTextBox1.BackColor = theme.richbox_back;
 				richTextBox1.ForeColor = theme.richbox_text;
 
@@ -143,8 +152,7 @@ namespace testApp
 				return btheme.filestrip_selected;
             }
 			WhiteTheme theme = new WhiteTheme();
-			return Color.White;
-			/*return theme.filestrip_selected;*/
+            return theme.filestrip_selected;
         }
 		public Color get_unselected_file_color()
 		{
@@ -154,10 +162,9 @@ namespace testApp
 				return btheme.filestrip_back;
 			}
 			WhiteTheme theme = new WhiteTheme();
-			return Color.White;
 
-			/*return theme.filestrip_back;*/
-		}
+            return theme.filestrip_back;
+        }
 
 		private void preparing()
         {

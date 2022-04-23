@@ -49,4 +49,47 @@ namespace testApp
 		{ get { return Color.FromArgb(78, 82, 84); } }
 
 	}
+	class White_CustomProfessionalColors : ProfessionalColorTable
+	{
+		public override Color MenuItemSelected
+		{ get { return Color.FromArgb(204, 204, 203); } }
+
+		public override Color MenuBorder
+		{ get { return Color.Transparent; } }
+
+		public override Color MenuItemSelectedGradientBegin
+		{ get { return Color.FromArgb(191, 191, 189); } }
+
+		public override Color MenuItemSelectedGradientEnd
+		{ get { return Color.FromArgb(191, 191, 189); } }
+
+		public override Color MenuItemBorder
+		{ get { return Color.FromArgb(204, 204, 203); } }
+
+		public override Color MenuItemPressedGradientBegin
+		{ get { return Color.FromArgb(228, 228, 227); } }
+
+		public override Color MenuItemPressedGradientEnd
+		{ get { return Color.FromArgb(228, 228, 227); } }
+
+		public override Color MenuStripGradientBegin
+		{ get { return Color.FromArgb(204, 204, 203); } }
+
+		public override Color MenuStripGradientEnd
+		{ get { return Color.FromArgb(204, 204, 203); } }
+
+		public override Color ToolStripDropDownBackground
+		{
+			get { return Color.FromArgb(195, 192, 190); }
+		}
+	}
+	class White_CustomProfessionalColors_files : White_CustomProfessionalColors
+	{
+		public override Color MenuItemSelectedGradientBegin
+		{ get { return Color.FromArgb(250, 250, 250); } }
+
+		public override Color MenuItemSelectedGradientEnd
+		{ get { return Color.FromArgb(250, 250, 250); } }
+
+	}
 }
