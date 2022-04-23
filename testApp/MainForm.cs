@@ -29,8 +29,8 @@ namespace testApp
 			InitializeComponent();
 			settings = new SettingsJson().fromJson(Jsonfile);
 			preparing();
-			menuStrip2.Renderer = new ToolStripProfessionalRenderer(new CustomProfessionalColors());
-			menuStrip1.Renderer = new ToolStripProfessionalRenderer(new CustomProfessionalColors2());
+			menuStrip2.Renderer = new ToolStripProfessionalRenderer(new Black_CustomProfessionalColors());
+			menuStrip1.Renderer = new ToolStripProfessionalRenderer(new Black_CustomProfessionalColors_files());
 
 		}
 
@@ -58,10 +58,12 @@ namespace testApp
 
 				toolStripStatusLabel2.BackColor = theme.menustrip_sepator;
 				toolStripStatusLabel2.ForeColor = theme.menustrip_sepator;
-				
 
-				BackColor = theme.richbox_back;
-				foreach(ToolStripMenuItem i in menuStrip2.Items)
+
+				BackColor = theme.filestrip_back;
+                /*icon.Image = Image.FromFile(settings.theme + "_ico.png");*/
+
+                foreach (ToolStripMenuItem i in menuStrip2.Items)
                 {
 					i.BackColor = theme.menustrip_item_back;
 					i.ForeColor = theme.menustrip_item_text;
@@ -578,48 +580,16 @@ namespace testApp
 			translation.Show();
 		}
 
+        private void lineNumbers_For_RichTextBox1_Resize(object sender, EventArgs e)
+        {
+			if(lineNumbers_For_RichTextBox1.Size.Width + lineNumbers_For_RichTextBox1.Location.X == richTextBox1.Location.X) { return; }
+			Point tmp = new Point(lineNumbers_For_RichTextBox1.Size.Width + lineNumbers_For_RichTextBox1.Location.X, 51);
+			Size size = new Size(richTextBox1.Size.Width - (tmp.X + richTextBox1.Size.Width - this.Width+ 15), richTextBox1.Size.Height);
+			richTextBox1.Location = tmp;
+			Console.WriteLine(lineNumbers_For_RichTextBox1.Size.Width + lineNumbers_For_RichTextBox1.Location.X + " " + richTextBox1.Location.X);
+			richTextBox1.Size = size;
+
+        }
     }
-	class CustomProfessionalColors : ProfessionalColorTable
-	{
-		public override Color MenuItemSelected
-		{ get { return Color.FromArgb(51, 51, 52); } }
-
-		public override Color MenuBorder
-		{ get { return Color.Transparent; } }
-
-		public override Color MenuItemSelectedGradientBegin
-		{ get { return Color.FromArgb(64, 64, 66); } }
-
-		public override Color MenuItemSelectedGradientEnd
-		{ get { return Color.FromArgb(64, 64, 66); } }
-
-		public override Color MenuItemBorder
-		{ get { return Color.FromArgb(51, 51, 52); } }
-
-		public override Color MenuItemPressedGradientBegin
-		{ get { return Color.FromArgb(27, 27, 28); } }
-
-		public override Color MenuItemPressedGradientEnd
-		{ get { return Color.FromArgb(27, 27, 28); } }
-
-        public override Color MenuStripGradientBegin
-        { get { return Color.FromArgb(51, 51, 52); } }
-
-        public override Color MenuStripGradientEnd
-		{ get { return Color.FromArgb(51, 51, 52); } }
-
-		public override Color ToolStripDropDownBackground
-		{
-			get { return Color.FromArgb(60, 63, 65); }
-		}
-	}
-	class CustomProfessionalColors2 : CustomProfessionalColors
-	{
-		public override Color MenuItemSelectedGradientBegin
-		{ get { return Color.FromArgb(78, 82, 84); } }
-
-		public override Color MenuItemSelectedGradientEnd
-		{ get { return Color.FromArgb(78, 82, 84); } }
-
-	}
+	
 }

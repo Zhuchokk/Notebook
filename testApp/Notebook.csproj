@@ -226,6 +226,7 @@
     <Compile Include="AutocompleteForm.Designer.cs">
       <DependentUpon>AutocompleteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Colors.cs" />
     <Compile Include="ExtendedToolStripSeparator.cs">
       <SubType>Component</SubType>
     </Compile>

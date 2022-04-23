@@ -34,13 +34,13 @@ namespace testApp
             strip = s;
 			textBox = box;
 		}
-        ~Textfile()
+        /*~Textfile()
         {
             strip.Items.Remove(item);
             item.Visible = false;
             item.Dispose();
             item = null;
-        }
+        }*/
 
         //functions
         public string get_extension(string file) {
