@@ -203,6 +203,7 @@ namespace testApp
 			if(textfiles.Length > 0)
             {
 				select_file(0);
+				open = false;
             }
             else
             {
@@ -226,6 +227,7 @@ namespace testApp
 
 			richTextBox1.ZoomFactor = settings.zoom;
 			richTextBox1.Font = settings.font;
+			zoom();
 
 			lineNumbers_For_RichTextBox1.Visible = settings.numbar;
 			lineNumbers_For_RichTextBox1.Enabled = settings.numbar;
@@ -334,7 +336,7 @@ namespace testApp
 					textfiles[i].close.Dispose();
 					textfiles[i] = null;
 					textfiles =  RemoveElementDefAt(textfiles, i);
-					/*Array.Clear(textfiles, i, 1);*/
+
 					open = true;
 					if (textfiles.Length == 0)
                     {
@@ -346,7 +348,6 @@ namespace testApp
                     {
 						richTextBox1.ReadOnly = false;
 						select_file(0);
-						/*richTextBox1.Text = textfiles[0].text;*/
                     }
                 }
             }
@@ -441,7 +442,7 @@ namespace testApp
 		}
 		private void menuitem_clicked(object sender, EventArgs e)
         {
-			open = true;
+			/*open = true;*/
 			ToolStripMenuItem s = (ToolStripMenuItem)sender;
 			Console.WriteLine(s.Tag);
 			textfiles[index].text = richTextBox1.Text;
@@ -460,15 +461,32 @@ namespace testApp
 		}
 		private void exit(object sender, EventArgs e)
         {
-			// НАДО ДОДЕЛАТЬ(например добавить файл .json)
-			Console.WriteLine("Exit");
+			bool changes = false;
+			for (int i=0; i < textfiles.Length; i++)
+            {
+                if (textfiles[i].changed) { changes = true; break; }
+            }
+            if (changes)
+            {
+				DialogResult res =  MessageBox.Show("You have unsaved changes. Do you want to exit? All unsaved changes will be deleted", "Notebook", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+				if (res == DialogResult.No) { return; }
+            }
+			settings.used_files = new string[0];
+			for(int i=0; i < textfiles.Length; i++)
+            {
+				if(textfiles[i].path.Length > 1)
+                {
+					Array.Resize(ref settings.used_files, settings.used_files.Length + 1);
+					settings.used_files[settings.used_files.Length - 1] = textfiles[i].path;
+				}
+            }
+
+			SettingsJson json = new SettingsJson();
+			json.toJson(Jsonfile, settings);
+
 			Application.Exit();
         } // доделать
 
-        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-			exit(sender, e);
-        }
 
 		private void position()
         {
@@ -730,12 +748,36 @@ namespace testApp
 			Point tmp = new Point(lineNumbers_For_RichTextBox1.Size.Width + lineNumbers_For_RichTextBox1.Location.X, 51);
 			Size size = new Size(richTextBox1.Size.Width - (tmp.X + richTextBox1.Size.Width - this.Width+ 15), richTextBox1.Size.Height);
 			richTextBox1.Location = tmp;
-			/*Console.WriteLine(lineNumbers_For_RichTextBox1.Size.Width + lineNumbers_For_RichTextBox1.Location.X + " " + richTextBox1.Location.X);*/
 			richTextBox1.Size = size;
 
         }
 
+        private void blackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			settings.theme = "black";
+			SettingsJson json = new SettingsJson();
+			json.toJson(Jsonfile, settings);
+			Application.Restart();
+        } //доделать
 
+        private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			settings.theme = "white";
+			SettingsJson json = new SettingsJson();
+			json.toJson(Jsonfile, settings);
+			Application.Restart();
+		} //доделать
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+			if (e.CloseReason == CloseReason.UserClosing)
+            {
+				e.Cancel = true;
+				exit(sender, e);
+			}
+				
+			
+        }
     }
 	
 }
