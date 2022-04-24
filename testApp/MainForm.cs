@@ -485,7 +485,7 @@ namespace testApp
 			json.toJson(Jsonfile, settings);
 
 			Application.Exit();
-        } // доделать
+        }
 
 
 		private void position()
@@ -757,16 +757,16 @@ namespace testApp
 			settings.theme = "black";
 			SettingsJson json = new SettingsJson();
 			json.toJson(Jsonfile, settings);
-			Application.Restart();
-        } //доделать
+			restart_themes();
+        } 
 
         private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
 			settings.theme = "white";
 			SettingsJson json = new SettingsJson();
 			json.toJson(Jsonfile, settings);
-			Application.Restart();
-		} //доделать
+			restart_themes();
+		} 
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -774,10 +774,35 @@ namespace testApp
             {
 				e.Cancel = true;
 				exit(sender, e);
-			}
-				
-			
+			}	
         }
+		private void restart_themes()
+        {
+			bool changes = false;
+			for (int i = 0; i < textfiles.Length; i++)
+			{
+				if (textfiles[i].changed) { changes = true; break; }
+			}
+			if (changes)
+			{
+				DialogResult res = MessageBox.Show("You have unsaved changes. Do you want to restart and change the theme? All unsaved changes will be deleted", "Notebook", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+				if (res == DialogResult.No) { return; }
+			}
+			settings.used_files = new string[0];
+			for (int i = 0; i < textfiles.Length; i++)
+			{
+				if (textfiles[i].path.Length > 1)
+				{
+					Array.Resize(ref settings.used_files, settings.used_files.Length + 1);
+					settings.used_files[settings.used_files.Length - 1] = textfiles[i].path;
+				}
+			}
+
+			SettingsJson json = new SettingsJson();
+			json.toJson(Jsonfile, settings);
+
+			Application.Restart();
+		}
     }
 	
 }
