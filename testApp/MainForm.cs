@@ -226,8 +226,18 @@ namespace testApp
 
 			richTextBox1.ZoomFactor = settings.zoom;
 			richTextBox1.Font = settings.font;
+
 			lineNumbers_For_RichTextBox1.Visible = settings.numbar;
+			lineNumbers_For_RichTextBox1.Enabled = settings.numbar;
+			numbarToolStripMenuItem.Checked = settings.numbar;
+
 			statusStrip1.Visible = settings.statusstrip;
+			statusStripToolStripMenuItem.Checked = settings.statusstrip;
+
+			EventArgs e = new EventArgs();
+			object sender = new object();
+			placer(sender, e);
+
 			richTextBox1.WordWrap = settings.wordwrap;
 			autocompleteMenu1.Enabled = settings.autocomplete_enabled;
 			autocompleteMenu1.AutoPopup = settings.auto_popup;
