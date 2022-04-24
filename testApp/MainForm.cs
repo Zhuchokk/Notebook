@@ -604,39 +604,77 @@ namespace testApp
 
 		} 
 
+		private void placer(object sender, EventArgs e)
+        {
+			if (statusStripToolStripMenuItem.Checked && numbarToolStripMenuItem.Checked)
+			{
+				lineNumbers_For_RichTextBox1.Dock = DockStyle.None;
+				statusStrip1.Dock = DockStyle.Bottom;
+				richTextBox1.Dock = DockStyle.Right;
+                lineNumbers_For_RichTextBox1.Dock = DockStyle.Left;
+				lineNumbers_For_RichTextBox1_Resize(sender, e);
+
+			}
+			else if (statusStripToolStripMenuItem.Checked)
+			{
+				statusStrip1.Dock = DockStyle.Bottom;
+                richTextBox1.Dock = DockStyle.Fill;
+				lineNumbers_For_RichTextBox1_Resize(sender, e);
+            }
+			else if (numbarToolStripMenuItem.Checked)
+			{
+                lineNumbers_For_RichTextBox1.Dock = DockStyle.Left;
+				richTextBox1.Dock = DockStyle.Right;
+				lineNumbers_For_RichTextBox1_Resize(sender, e);
+			}
+			else
+			{
+				richTextBox1.Dock = DockStyle.Fill;
+			}
+		}
+
         private void numbarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+			bool delete = false;
 			lineNumbers_For_RichTextBox1.Visible = !numbarToolStripMenuItem.Checked;
 			lineNumbers_For_RichTextBox1.Enabled = !numbarToolStripMenuItem.Checked;
 			settings.numbar = !numbarToolStripMenuItem.Checked;
 			numbarToolStripMenuItem.Checked = !numbarToolStripMenuItem.Checked;
 
-            if (!numbarToolStripMenuItem.Checked)
-            {
-				richTextBox1.Dock = DockStyle.Fill;
-            }
-            else
-            {
-				richTextBox1.Dock = DockStyle.Right;
-				richTextBox1.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
-				
+			if (richTextBox1.TextLength <= 1)
+			{
+				open = true;
+				richTextBox1.Text += " ";
+				delete = true;
 			}
-			richTextBox1.Update();
-			lineNumbers_For_RichTextBox1_Resize(sender, e);
 
-			/*if ()*/
+			placer(sender, e);
 
-		} //закончить
+			if (delete)
+			{
+				open = true;
+				richTextBox1.Text = richTextBox1.Text.Substring(0, richTextBox1.Text.Length - 1);
+			}
+
+        } 
 
         private void toolStripToolStripMenuItem_Click(object sender, EventArgs e)
         {
+			statusStrip1.Visible = !statusStripToolStripMenuItem.Checked;
+			settings.statusstrip = !statusStripToolStripMenuItem.Checked;
+			statusStripToolStripMenuItem.Checked = !statusStripToolStripMenuItem.Checked;
 
-        } //закончить
+			placer(sender, e);
+
+        } 
 
         private void wordWrapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        } //закончить
+			settings.wordwrap = !wordWrapToolStripMenuItem.Checked;
+			richTextBox1.WordWrap = !wordWrapToolStripMenuItem.Checked;
+			wordWrapToolStripMenuItem.Checked = !wordWrapToolStripMenuItem.Checked;
+			
+        } 
 
         private void autocompleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
