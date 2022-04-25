@@ -65,12 +65,18 @@ namespace testApp
 
                 numericUpDown1.BackColor = theme.child_form_entry_back;
                 numericUpDown1.ForeColor = theme.child_form_text;
-
+                numericUpDown1.BorderColor = theme.child_form_but_text;
+                numericUpDown1.ButtonHighlightColor = theme.child_form_but_back;
+                
                 numericUpDown2.BackColor = theme.child_form_entry_back;
                 numericUpDown2.ForeColor = theme.child_form_text;
+                numericUpDown2.BorderColor = theme.child_form_but_text;
+                numericUpDown2.ButtonHighlightColor = theme.child_form_but_back;
 
                 comboBox1.BackColor = theme.child_form_entry_back;
                 comboBox1.ForeColor = theme.child_form_text;
+                comboBox1.BorderColor = theme.child_form_but_text;
+                comboBox1.ButtonColor = theme.child_form_but_back;
             }
         }
         public string[] split(string text)
