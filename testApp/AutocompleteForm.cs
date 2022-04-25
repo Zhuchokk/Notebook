@@ -27,6 +27,51 @@ namespace testApp
             numericUpDown2.Value = settings.minlen_fragment;
             comboBox1.SelectedItem = settings.dictionary;
             comboBox1.Text = settings.dictionary;
+
+
+            if(settings.theme.ToLower() == "black")
+            {
+                BlackTheme theme = new BlackTheme();
+
+                this.BackColor = theme.child_form_back;
+                this.ForeColor = theme.child_form_text;
+                groupBox1.ForeColor = theme.child_form_text;
+
+
+                numericUpDown1.BackColor = theme.child_form_entry_back;
+                numericUpDown1.ForeColor = theme.child_form_text;
+                numericUpDown1.BorderColor = theme.child_form_but_text;
+                numericUpDown1.ButtonHighlightColor =theme.child_form_but_text;
+
+                numericUpDown2.BackColor = theme.child_form_entry_back;
+                numericUpDown2.ForeColor = theme.child_form_text;
+                numericUpDown2.BorderColor = theme.child_form_but_text;
+                numericUpDown2.ButtonHighlightColor = theme.child_form_but_text;
+
+                comboBox1.BackColor = theme.child_form_entry_back;
+                comboBox1.ForeColor = theme.child_form_text;
+                comboBox1.BorderColor = theme.child_form_but_text;
+                comboBox1.ButtonColor = theme.child_form_but_back;
+                
+            }
+            else
+            {
+                WhiteTheme theme = new WhiteTheme();
+
+                this.BackColor = theme.child_form_back;
+                this.ForeColor = theme.child_form_text;
+                groupBox1.ForeColor = theme.child_form_text;
+
+
+                numericUpDown1.BackColor = theme.child_form_entry_back;
+                numericUpDown1.ForeColor = theme.child_form_text;
+
+                numericUpDown2.BackColor = theme.child_form_entry_back;
+                numericUpDown2.ForeColor = theme.child_form_text;
+
+                comboBox1.BackColor = theme.child_form_entry_back;
+                comboBox1.ForeColor = theme.child_form_text;
+            }
         }
         public string[] split(string text)
         {
@@ -86,5 +131,36 @@ namespace testApp
             }
             
         }
+
+        private void checkBox1_Paint(object sender, PaintEventArgs e)
+        {
+            Color back;
+            SolidBrush fore;
+            CheckBox box = (CheckBox)sender;
+            if(settings.theme.ToLower() == "black")
+            {
+                BlackTheme theme = new BlackTheme();
+                back = theme.child_form_entry_back;
+                fore = new SolidBrush( theme.child_form_text);
+            }
+            else
+            {
+                WhiteTheme theme = new WhiteTheme();
+                back = theme.child_form_entry_back;
+                fore = new SolidBrush( theme.child_form_text);
+            }
+
+            Point pt = new Point(e.ClipRectangle.Left, e.ClipRectangle.Top);
+            Rectangle rect = new Rectangle(pt, new Size(13, 13));
+            
+            if (box.Checked)
+            {
+                using (Font wing = new Font("Wingdings", 10.5f))
+                    e.Graphics.DrawString("ü", wing, fore, rect);
+            }
+            Pen pen = new Pen(back);
+            e.Graphics.DrawRectangle(pen, rect);
+        }
     }
+
 }
