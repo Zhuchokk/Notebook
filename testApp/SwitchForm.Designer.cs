@@ -30,9 +30,9 @@ namespace testApp
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new testApp.FlatCombo();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new testApp.FlatCombo();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -83,7 +83,8 @@ namespace testApp
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(11, 74);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(11, 81);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(337, 35);
             this.button1.TabIndex = 4;
@@ -125,9 +126,9 @@ namespace testApp
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private FlatCombo comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private FlatCombo comboBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
     }

@@ -14,6 +14,7 @@ namespace testApp
     {
         RichTextBox box;
         Active active;
+        Settings settings;
         Dictionary<Char, Char> layout = new Dictionary<Char, Char>()
         {
             {'q', 'й'},
@@ -96,11 +97,54 @@ namespace testApp
             {'ю', '.'},
         };
 
-        public SwitchForm(ref RichTextBox textBox, Active a)
+        public SwitchForm(ref RichTextBox textBox, Active a, Settings s)
         {
             InitializeComponent();
             box = textBox;
             active = a;
+            settings = s;
+
+            if (settings.theme.ToLower() == "black")
+            {
+                BlackTheme theme = new BlackTheme();
+
+                this.BackColor = theme.child_form_back;
+                this.ForeColor = theme.child_form_text;
+
+                comboBox1.BackColor = theme.child_form_entry_back;
+                comboBox1.ForeColor = theme.child_form_text;
+                comboBox1.BorderColor = theme.child_form_but_text;
+                comboBox1.ButtonColor = theme.child_form_but_back;
+
+                comboBox2.BackColor = theme.child_form_entry_back;
+                comboBox2.ForeColor = theme.child_form_text;
+                comboBox2.BorderColor = theme.child_form_but_text;
+                comboBox2.ButtonColor = theme.child_form_but_back;
+
+                button1.ForeColor = theme.child_form_but_text;
+                button1.BackColor = theme.child_form_but_back;
+
+            }
+            else
+            {
+                WhiteTheme theme = new WhiteTheme();
+
+                this.BackColor = theme.child_form_back;
+                this.ForeColor = theme.child_form_text;
+
+                comboBox1.BackColor = theme.child_form_entry_back;
+                comboBox1.ForeColor = theme.child_form_text;
+                comboBox1.BorderColor = theme.child_form_but_text;
+                comboBox1.ButtonColor = theme.child_form_but_back;
+
+                comboBox2.BackColor = theme.child_form_entry_back;
+                comboBox2.ForeColor = theme.child_form_text;
+                comboBox2.BorderColor = theme.child_form_but_text;
+                comboBox2.ButtonColor = theme.child_form_but_back;
+
+                button1.ForeColor = theme.child_form_but_text;
+                button1.BackColor = theme.child_form_but_back;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

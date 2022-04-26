@@ -732,7 +732,7 @@ namespace testApp
         {
 			Active func;
 			func = this.Activate;
-			SwitchForm switchForm = new SwitchForm(ref richTextBox1, func);
+			SwitchForm switchForm = new SwitchForm(ref richTextBox1, func, settings);
 			switchForm.Show();
         }
 
