@@ -738,7 +738,7 @@ namespace testApp
 
         private void translatorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-			TranslationForm translation = new TranslationForm();
+			TranslationForm translation = new TranslationForm(settings);
 			translation.Show();
 		}
 
