@@ -33,13 +33,14 @@ namespace testApp
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new FlatNumericUpDown();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(3, 18);
             this.richTextBox1.Name = "richTextBox1";
@@ -59,9 +60,10 @@ namespace testApp
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(410, 65);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 23);
+            this.button1.Size = new System.Drawing.Size(196, 31);
             this.button1.TabIndex = 5;
             this.button1.Text = "Read The Text";
             this.button1.UseVisualStyleBackColor = true;
@@ -78,6 +80,7 @@ namespace testApp
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown1.Location = new System.Drawing.Point(486, 27);
             this.numericUpDown1.Minimum = new decimal(new int[] {
             1,
@@ -122,6 +125,6 @@ namespace testApp
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private FlatNumericUpDown numericUpDown1;
     }
 }

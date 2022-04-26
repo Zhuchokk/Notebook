@@ -14,9 +14,46 @@ namespace testApp
     public partial class SynthesizerForm : Form
     {
         public SpeechSynthesizer synth;
-        public SynthesizerForm()
+        public Settings settings;
+        public SynthesizerForm(Settings s)
         {
             InitializeComponent();
+            settings = s;
+            if (settings.theme.ToLower() == "black")
+            {
+                BlackTheme theme = new BlackTheme();
+
+                this.BackColor = theme.child_form_back;
+                this.ForeColor = theme.child_form_text;
+                groupBox1.ForeColor = theme.child_form_text;
+
+
+                numericUpDown1.BackColor = theme.child_form_entry_back;
+                numericUpDown1.ForeColor = theme.child_form_text;
+                numericUpDown1.BorderColor = theme.child_form_but_text;
+                numericUpDown1.ButtonHighlightColor = theme.child_form_but_back;
+
+                richTextBox1.ForeColor = theme.richbox_text;
+                richTextBox1.BackColor = theme.richbox_back;
+
+            }
+            else
+            {
+                WhiteTheme theme = new WhiteTheme();
+
+                this.BackColor = theme.child_form_back;
+                this.ForeColor = theme.child_form_text;
+                groupBox1.ForeColor = theme.child_form_text;
+
+
+                numericUpDown1.BackColor = theme.child_form_entry_back;
+                numericUpDown1.ForeColor = theme.child_form_text;
+                numericUpDown1.BorderColor = theme.child_form_but_text;
+                numericUpDown1.ButtonHighlightColor = theme.child_form_but_back;
+
+                richTextBox1.ForeColor = theme.richbox_text;
+                richTextBox1.BackColor = theme.richbox_back;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

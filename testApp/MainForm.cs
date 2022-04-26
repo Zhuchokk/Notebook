@@ -718,7 +718,7 @@ namespace testApp
 
         private void readTheTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
-			Form synthesizer = new SynthesizerForm();
+			Form synthesizer = new SynthesizerForm(settings);
 			synthesizer.Show();
         }
 
