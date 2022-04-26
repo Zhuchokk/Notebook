@@ -158,13 +158,16 @@ namespace testApp
 
             Point pt = new Point(e.ClipRectangle.Left, e.ClipRectangle.Top);
             Rectangle rect = new Rectangle(pt, new Size(13, 13));
-            
+            Rectangle fRect = ClientRectangle;
+            Pen pen = new Pen(back);
+
+            e.Graphics.FillRectangle(new SolidBrush(pen.Color), fRect);
             if (box.Checked)
             {
                 using (Font wing = new Font("Wingdings", 10.5f))
                     e.Graphics.DrawString("ü", wing, fore, rect);
             }
-            Pen pen = new Pen(back);
+            
             e.Graphics.DrawRectangle(pen, rect);
         }
     }
