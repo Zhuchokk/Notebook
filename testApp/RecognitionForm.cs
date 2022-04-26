@@ -12,9 +12,48 @@ namespace testApp
     public partial class RecognitionForm : Form
     {
         SpeechRecognitionEngine recognizer;
-        public RecognitionForm()
+        Settings settings;
+        public RecognitionForm(Settings s)
         {
             InitializeComponent();
+            settings = s;
+            if (settings.theme.ToLower() == "black")
+            {
+                BlackTheme theme = new BlackTheme();
+
+                this.BackColor = theme.child_form_back;
+                this.ForeColor = theme.child_form_text;
+
+                comboBox1.BackColor = theme.child_form_entry_back;
+                comboBox1.ForeColor = theme.child_form_text;
+                comboBox1.BorderColor = theme.child_form_but_text;
+                comboBox1.ButtonColor = theme.child_form_but_back;
+
+                textBox1.ForeColor = theme.child_form_text;
+                textBox1.BackColor = theme.child_form_entry_back;
+
+                button1.ForeColor = theme.child_form_but_text;
+                button1.BackColor = theme.child_form_but_back;
+
+            }
+            else
+            {
+                WhiteTheme theme = new WhiteTheme();
+
+                this.BackColor = theme.child_form_back;
+                this.ForeColor = theme.child_form_text;
+                
+                comboBox1.BackColor = theme.child_form_entry_back;
+                comboBox1.ForeColor = theme.child_form_text;
+                comboBox1.BorderColor = theme.child_form_but_text;
+                comboBox1.ButtonColor = theme.child_form_but_back;
+
+                textBox1.ForeColor = theme.child_form_text;
+                textBox1.BackColor = theme.child_form_entry_back;
+
+                button1.ForeColor = theme.child_form_but_text;
+                button1.BackColor = theme.child_form_but_back;
+            }
         }
 
 
