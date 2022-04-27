@@ -30,11 +30,11 @@ namespace testApp
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new testApp.FlatCombo();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new testApp.FlatCombo();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new testApp.FlatCombo();
+            this.comboBox1 = new testApp.FlatCombo();
             this.SuspendLayout();
             // 
             // label1
@@ -46,19 +46,6 @@ namespace testApp
             this.label1.TabIndex = 0;
             this.label1.Text = "Layout";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Qwerty",
-            "Йцукен"});
-            this.comboBox1.Location = new System.Drawing.Point(65, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "Qwerty";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -67,19 +54,6 @@ namespace testApp
             this.label2.Size = new System.Drawing.Size(29, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = " To";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Enabled = false;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Йцукен",
-            "Qwerty"});
-            this.comboBox2.Location = new System.Drawing.Point(227, 44);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 3;
-            this.comboBox2.Text = "Йцукен";
             // 
             // button1
             // 
@@ -101,6 +75,30 @@ namespace testApp
             this.label3.TabIndex = 5;
             this.label3.Text = "*Select necessary text in text editor";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.Items.AddRange(new object[] {
+            "Йцукен",
+            "Qwerty"});
+            this.comboBox2.Location = new System.Drawing.Point(227, 44);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 3;
+            this.comboBox2.Text = "Йцукен";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Items.AddRange(new object[] {
+            "Qwerty",
+            "Йцукен"});
+            this.comboBox1.Location = new System.Drawing.Point(65, 44);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.Text = "Qwerty";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // SwitchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -113,7 +111,9 @@ namespace testApp
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(380, 175);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(380, 175);
             this.Name = "SwitchForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -126,10 +126,10 @@ namespace testApp
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private FlatCombo comboBox1;
         private System.Windows.Forms.Label label2;
-        private FlatCombo comboBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private FlatCombo comboBox1;
+        private FlatCombo comboBox2;
     }
 }

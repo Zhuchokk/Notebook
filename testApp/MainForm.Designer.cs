@@ -101,7 +101,7 @@ namespace testApp
             this.Etalon_close});
             this.menuStrip1.Location = new System.Drawing.Point(0, 31);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(739, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(739, 30);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -560,7 +560,7 @@ namespace testApp
             this.lineNumbers_For_RichTextBox1.LineNrs_ClippedByItemRectangle = true;
             this.lineNumbers_For_RichTextBox1.LineNrs_LeadingZeroes = false;
             this.lineNumbers_For_RichTextBox1.LineNrs_Offset = new System.Drawing.Size(0, 0);
-            this.lineNumbers_For_RichTextBox1.Location = new System.Drawing.Point(0, 55);
+            this.lineNumbers_For_RichTextBox1.Location = new System.Drawing.Point(0, 61);
             this.lineNumbers_For_RichTextBox1.Margin = new System.Windows.Forms.Padding(0);
             this.lineNumbers_For_RichTextBox1.MarginLines_Color = System.Drawing.Color.GhostWhite;
             this.lineNumbers_For_RichTextBox1.MarginLines_Side = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Right;
@@ -574,7 +574,7 @@ namespace testApp
             this.lineNumbers_For_RichTextBox1.Show_GridLines = false;
             this.lineNumbers_For_RichTextBox1.Show_LineNrs = true;
             this.lineNumbers_For_RichTextBox1.Show_MarginLines = false;
-            this.lineNumbers_For_RichTextBox1.Size = new System.Drawing.Size(22, 377);
+            this.lineNumbers_For_RichTextBox1.Size = new System.Drawing.Size(22, 371);
             this.lineNumbers_For_RichTextBox1.TabIndex = 0;
             this.lineNumbers_For_RichTextBox1.Resize += new System.EventHandler(this.lineNumbers_For_RichTextBox1_Resize);
             // 

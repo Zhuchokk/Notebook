@@ -209,5 +209,17 @@ namespace testApp
                 comboBox2.SelectedItem = "Qwerty";
             }
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedItem.ToString() == "Qwerty")
+            {
+                comboBox1.SelectedItem = "Йцукен";
+            }
+            else
+            {
+                comboBox1.SelectedItem = "Qwerty";
+            }
+        }
     }
 }
