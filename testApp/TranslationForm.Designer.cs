@@ -30,28 +30,13 @@ namespace testApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.comboBox1 = new testApp.FlatCombo();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new testApp.FlatCombo();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.comboBox2 = new testApp.FlatCombo();
+            this.comboBox1 = new testApp.FlatCombo();
             this.SuspendLayout();
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "English",
-            "Russian",
-            "Spanish",
-            "Deutsch"});
-            this.comboBox1.Location = new System.Drawing.Point(16, 15);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 24);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "English";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.combobox_changed);
             // 
             // button1
             // 
@@ -69,6 +54,30 @@ namespace testApp
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(16, 46);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(179, 128);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "Enter text";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.richTextBox1.Enter += new System.EventHandler(this.richTextBox1_Enter);
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(194, 46);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.Size = new System.Drawing.Size(186, 128);
+            this.richTextBox2.TabIndex = 4;
+            this.richTextBox2.Text = "Translation";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -84,28 +93,20 @@ namespace testApp
             this.comboBox2.Text = "Russian";
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.combobox_changed);
             // 
-            // richTextBox1
+            // comboBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(16, 46);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(179, 128);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "Enter text";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            this.richTextBox1.Enter += new System.EventHandler(this.richTextBox1_Enter);
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(194, 46);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(186, 128);
-            this.richTextBox2.TabIndex = 4;
-            this.richTextBox2.Text = "Translation";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "English",
+            "Russian",
+            "Spanish",
+            "Deutsch"});
+            this.comboBox1.Location = new System.Drawing.Point(16, 15);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(163, 24);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "English";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.combobox_changed);
             // 
             // TranslationForm
             // 

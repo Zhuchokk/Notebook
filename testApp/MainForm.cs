@@ -754,6 +754,7 @@ namespace testApp
 
         private void blackToolStripMenuItem_Click(object sender, EventArgs e)
         {
+			if(settings.theme.ToLower() == "black") { return; }
 			settings.theme = "black";
 			SettingsJson json = new SettingsJson();
 			json.toJson(Jsonfile, settings);
@@ -762,6 +763,7 @@ namespace testApp
 
         private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+			if (settings.theme.ToLower() == "white") { return; }
 			settings.theme = "white";
 			SettingsJson json = new SettingsJson();
 			json.toJson(Jsonfile, settings);
