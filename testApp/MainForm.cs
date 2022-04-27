@@ -557,7 +557,7 @@ namespace testApp
 			
 			Active func;
 			func = this.Activate;
-			Form find = new FindForm(ref richTextBox1, func);
+			Form find = new FindForm(ref richTextBox1, func, settings);
 			find.Show();
 			
         }
