@@ -42,8 +42,8 @@ namespace testApp
                 richTextBox1.ForeColor = theme.richbox_text;
                 richTextBox1.BackColor = theme.richbox_back;
 
-                richTextBox2.ForeColor = theme.richbox_text;
-                richTextBox2.BackColor = theme.richbox_back;
+                richTextBox2.ForeColor = Color.FromArgb(theme.richbox_text.R - 60, theme.richbox_text.G - 60, theme.richbox_text.B - 60);
+                richTextBox2.BackColor = Color.FromArgb(theme.richbox_back.R + 10, theme.richbox_back.G + 10, theme.richbox_back.B + 10);
 
             }
             else
@@ -66,8 +66,8 @@ namespace testApp
                 button1.ForeColor = theme.child_form_but_text;
                 button1.BackColor = theme.child_form_back;
 
-                richTextBox2.ForeColor = theme.richbox_text;
-                richTextBox2.BackColor = theme.richbox_back;
+                richTextBox2.ForeColor = Color.FromArgb(theme.richbox_text.R + 60, theme.richbox_text.G + 60, theme.richbox_text.B + 60);
+                richTextBox2.BackColor = Color.FromArgb(theme.richbox_back.R - 10, theme.richbox_back.G - 10, theme.richbox_back.B - 10);
             }
         }
 

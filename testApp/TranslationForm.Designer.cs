@@ -30,9 +30,9 @@ namespace testApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.comboBox1 = new FlatCombo();
+            this.comboBox1 = new testApp.FlatCombo();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new FlatCombo();
+            this.comboBox2 = new testApp.FlatCombo();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -96,7 +96,6 @@ namespace testApp
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Enabled = false;
             this.richTextBox2.Location = new System.Drawing.Point(194, 46);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(186, 128);
