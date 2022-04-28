@@ -566,7 +566,7 @@ namespace testApp
         {
 			Active func;
 			func = this.Activate;
-			Form replace = new ReplaceForm(ref richTextBox1, func);
+			Form replace = new ReplaceForm(ref richTextBox1, func, settings);
 			replace.Show();
 		}
 

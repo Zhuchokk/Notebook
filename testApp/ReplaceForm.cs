@@ -15,12 +15,81 @@ namespace testApp
         public bool changed = false;
         public RichTextBox richTextBox;
         public Active activate;
+        Settings settings;
 
-        public ReplaceForm(ref RichTextBox richText, Active active)
+        public ReplaceForm(ref RichTextBox richText, Active active, Settings s)
         {
             InitializeComponent();
             richTextBox = richText;
             activate = active;
+            settings = s;
+
+            if (settings.theme.ToLower() == "black")
+            {
+                BlackTheme theme = new BlackTheme();
+
+                this.BackColor = theme.child_form_back;
+                this.ForeColor = theme.child_form_text;
+                groupBox1.ForeColor = theme.child_form_text;
+
+                button1.ForeColor = theme.child_form_but_text;
+                button1.BackColor = theme.child_form_but_back;
+
+                button2.ForeColor = theme.child_form_but_text;
+                button2.BackColor = theme.child_form_but_back;
+
+                button3.ForeColor = theme.child_form_but_text;
+                button3.BackColor = theme.child_form_but_back;
+
+                button4.ForeColor = theme.child_form_but_text;
+                button4.BackColor = theme.child_form_but_back;
+
+                textBox1.ForeColor = theme.child_form_text;
+                textBox1.BackColor = theme.child_form_entry_back;
+
+                textBox2.ForeColor = theme.child_form_text;
+                textBox2.BackColor = theme.child_form_entry_back;
+
+                radioButton1.ForeColor = theme.child_form_text;
+                radioButton1.BackColor = theme.child_form_back;
+
+                radioButton2.ForeColor = theme.child_form_text;
+                radioButton2.BackColor = theme.child_form_back;
+            }
+            else
+            {
+                WhiteTheme theme = new WhiteTheme();
+
+                this.BackColor = theme.child_form_back;
+                this.ForeColor = theme.child_form_text;
+                groupBox1.ForeColor = theme.child_form_text;
+
+                button1.ForeColor = theme.child_form_but_text;
+                button1.BackColor = theme.child_form_but_back;
+
+                button2.ForeColor = theme.child_form_but_text;
+                button2.BackColor = theme.child_form_but_back;
+
+                button3.ForeColor = theme.child_form_but_text;
+                button3.BackColor = theme.child_form_but_back;
+
+                button4.ForeColor = theme.child_form_but_text;
+                button4.BackColor = theme.child_form_but_back;
+
+                textBox1.ForeColor = theme.child_form_text;
+                textBox1.BackColor = theme.child_form_entry_back;
+
+                textBox2.ForeColor = theme.child_form_text;
+                textBox2.BackColor = theme.child_form_entry_back;
+
+                radioButton1.ForeColor = theme.child_form_text;
+                radioButton1.BackColor = theme.child_form_back;
+
+                radioButton2.ForeColor = theme.child_form_text;
+                radioButton2.BackColor = theme.child_form_back;
+
+
+            }
         }
 
         public int find(string main, string to_find, bool match, int vector, bool wrap)
@@ -150,6 +219,7 @@ namespace testApp
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if(textBox2.Text.Length == 0) { return; }
             string text_to_replace = textBox1.Text;
             string text_to_find = textBox2.Text;
             bool match = checkBox1.Checked;
@@ -173,6 +243,7 @@ namespace testApp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(textBox2.Text.Length == 0) { return; }
             string text_to_replace = textBox1.Text;
             string text_to_find = textBox2.Text;
             if(richTextBox.SelectedText == text_to_find)
@@ -186,6 +257,7 @@ namespace testApp
         }
         private void button4_Click(object sender, EventArgs e)
         {
+            if(textBox2.Text.Length == 0) { return; }
             string text_to_find = textBox2.Text;
             bool match = checkBox1.Checked;
             bool wrap = checkBox2.Checked;
@@ -256,6 +328,38 @@ namespace testApp
         private void button3_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+        private void checkBox1_Paint(object sender, PaintEventArgs e)
+        {
+            Color back;
+            SolidBrush fore;
+            CheckBox box = (CheckBox)sender;
+            if (settings.theme.ToLower() == "black")
+            {
+                BlackTheme theme = new BlackTheme();
+                back = theme.child_form_entry_back;
+                fore = new SolidBrush(theme.child_form_text);
+            }
+            else
+            {
+                WhiteTheme theme = new WhiteTheme();
+                back = theme.child_form_entry_back;
+                fore = new SolidBrush(theme.child_form_text);
+            }
+
+            Point pt = new Point(e.ClipRectangle.Left, e.ClipRectangle.Top);
+            Rectangle rect = new Rectangle(pt, new Size(13, 13));
+            Rectangle fRect = ClientRectangle;
+            Pen pen = new Pen(back);
+
+            e.Graphics.FillRectangle(new SolidBrush(pen.Color), fRect);
+            if (box.Checked)
+            {
+                using (Font wing = new Font("Wingdings", 10.5f))
+                    e.Graphics.DrawString("ü", wing, fore, rect);
+            }
+
+            e.Graphics.DrawRectangle(pen, rect);
         }
     }
 }

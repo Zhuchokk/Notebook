@@ -42,6 +42,8 @@ namespace testApp
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +83,8 @@ namespace testApp
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(388, 57);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(394, 63);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 30);
@@ -92,7 +95,8 @@ namespace testApp
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(388, 87);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(394, 96);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 30);
@@ -103,7 +107,8 @@ namespace testApp
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(388, 120);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(394, 129);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 30);
             this.button3.TabIndex = 6;
@@ -148,31 +153,36 @@ namespace testApp
             // 
             // checkBox1
             // 
-            this.checkBox1.AutoSize = true;
+            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox1.FlatAppearance.BorderSize = 0;
             this.checkBox1.Location = new System.Drawing.Point(15, 182);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(102, 21);
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "Match case";
+            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.checkBox1_Paint);
             // 
             // checkBox2
             // 
-            this.checkBox2.AutoSize = true;
+            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.FlatAppearance.BorderSize = 0;
             this.checkBox2.Location = new System.Drawing.Point(15, 209);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(113, 21);
+            this.checkBox2.Size = new System.Drawing.Size(18, 17);
             this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "Wrap around";
+            this.checkBox2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.checkBox1_Paint);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(388, 26);
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(394, 28);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(97, 30);
@@ -181,11 +191,31 @@ namespace testApp
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(39, 182);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 17);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Match case";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(39, 208);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 17);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Wrap around";
+            // 
             // ReplaceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 238);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
@@ -198,7 +228,9 @@ namespace testApp
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(527, 285);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(527, 285);
             this.Name = "ReplaceForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -225,5 +257,7 @@ namespace testApp
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
