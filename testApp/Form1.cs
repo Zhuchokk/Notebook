@@ -163,6 +163,7 @@ namespace testApp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(textBox1.Text.Length == 0) { return; }
             string text_to_find = textBox1.Text;
             bool match = checkBox1.Checked;
             bool wrap = checkBox2.Checked;
