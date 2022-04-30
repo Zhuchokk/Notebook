@@ -805,6 +805,19 @@ namespace testApp
 
 			Application.Restart();
 		}
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            lineNumbers_For_RichTextBox1_Resize(sender, e);
+        }
+
+        private void OpenedFilesMenuItem_Click(object sender, EventArgs e)
+        {
+			for(int i=0; i < textfiles.Length; i++)
+            {
+
+            }
+        }
     }
 	
 }

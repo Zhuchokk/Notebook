@@ -142,7 +142,7 @@ namespace testApp
                     path = correct_path("json");
                     break;
             }
-
+            
             File.WriteAllText(path, text, Encoding.Default);
             if (flag) { item.Text = getname(); item.Tag = path; change(false); } else {
                 path = new_path;
