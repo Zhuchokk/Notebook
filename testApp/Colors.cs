@@ -11,6 +11,10 @@ namespace testApp
 		public override Color MenuItemSelected
 		{ get { return Color.FromArgb(51, 51, 52); } }
 
+		public override Color ImageMarginGradientBegin => Color.FromArgb(60, 63, 65);
+		public override Color ImageMarginGradientEnd => Color.FromArgb(60, 63, 65);
+
+
 		public override Color MenuBorder
 		{ get { return Color.Transparent; } }
 
@@ -53,6 +57,9 @@ namespace testApp
 	{
 		public override Color MenuItemSelected
 		{ get { return Color.FromArgb(204, 204, 203); } }
+
+		public override Color ImageMarginGradientBegin => Color.FromArgb(195, 192, 190);
+		public override Color ImageMarginGradientEnd => Color.FromArgb(195, 192, 190);
 
 		public override Color MenuBorder
 		{ get { return Color.Transparent; } }

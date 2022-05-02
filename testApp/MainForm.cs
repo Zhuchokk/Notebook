@@ -811,13 +811,71 @@ namespace testApp
             lineNumbers_For_RichTextBox1_Resize(sender, e);
         }
 
-        private void OpenedFilesMenuItem_Click(object sender, EventArgs e)
+		private void opened_files_clicked(object sender, EventArgs e)
         {
+
+			ToolStripMenuItem close = null;
+			ToolStripMenuItem title = null;
+			bool first = true;
+			bool second = false;
+			ToolStripMenuItem now = (ToolStripMenuItem)(sender);
+			Console.WriteLine("NOW:" + now.Tag + now.Text);
+			ToolStripMenuItem[] menuItems = new ToolStripMenuItem[0];
+			foreach(ToolStripMenuItem item in menuStrip1.Items)
+            {
+				if(item.Tag == "v") { continue; }
+				if (first == true && item.Tag == now.Tag)
+				{
+					title = item;
+					first = false;
+					second = true;
+				} else if (second)
+                {
+					second = false;
+					close = item;
+                }
+				else
+				{
+					Array.Resize(ref menuItems, menuItems.Length + 1);
+					menuItems[menuItems.Length - 1] = item;
+				}
+            }
+			menuStrip1.Items.Clear();
 			for(int i=0; i < textfiles.Length; i++)
             {
-
+				if(textfiles[i].item.Tag == title.Tag)
+                {
+					select_file(i);
+					break;
+                }
             }
+			menuStrip1.Items.Add(OpenedFilesMenuItem);
+			menuStrip1.Items.Add(title);
+			menuStrip1.Items.Add(close);
+			menuStrip1.Items.AddRange(menuItems);
+
         }
+
+        private void OpenedFilesMenuItem_Click(object sender, EventArgs e)
+        {
+			OpenedFilesMenuItem.DropDownItems.Clear();
+			ToolStripMenuItem[] items = new ToolStripMenuItem[0];
+			for(int i=0; i < menuStrip1.Items.Count; i++)
+            {
+				if(menuStrip1.Items[i].Tag == "v" || menuStrip1.Items[i].Text.Length == 0) { continue; }
+				ToolStripMenuItem item = new ToolStripMenuItem();
+				item.Text = menuStrip1.Items[i].Text;
+				item.Tag = menuStrip1.Items[i].Tag;
+				item.CheckState = CheckState.Unchecked;
+				item.Checked = false;
+				item.Click += new EventHandler(opened_files_clicked);
+
+				Array.Resize(ref items, items.Length + 1);
+				items[items.Length - 1] = item;
+				
+            }
+			OpenedFilesMenuItem.DropDownItems.AddRange(items);
+		}
     }
 	
 }
