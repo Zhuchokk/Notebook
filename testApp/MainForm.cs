@@ -18,6 +18,7 @@ namespace testApp
 	{
 		public Textfile[] textfiles = { };
 		public Settings settings = new Settings();
+		public Highlighting text_match = new Highlighting();
 		string Jsonfile = Application.StartupPath + @"\settings.json";
 		int index = 0;
 		bool open = false;
@@ -411,7 +412,9 @@ namespace testApp
         {
             if (open) { open = false; return; }
 			textfiles[index].change(true);
-        }
+			text_match.some_strings_highlight(ref richTextBox1, richTextBox1.GetLineFromCharIndex(richTextBox1.SelectionStart), textfiles[index]);
+
+		}
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -845,6 +848,7 @@ namespace testApp
             {
 				if(textfiles[i].item.Tag == title.Tag)
                 {
+					textfiles[index].text = richTextBox1.Text;
 					select_file(i);
 					break;
                 }
@@ -865,6 +869,20 @@ namespace testApp
 				if(menuStrip1.Items[i].Tag == "v" || menuStrip1.Items[i].Text.Length == 0) { continue; }
 				ToolStripMenuItem item = new ToolStripMenuItem();
 				item.Text = menuStrip1.Items[i].Text;
+				if(settings.theme.ToLower() == "black")
+                {
+					BlackTheme theme = new BlackTheme();
+					item.ForeColor = theme.filestrip_text;
+					item.BackColor = theme.filestrip_back;
+
+                }
+                else
+                {
+					WhiteTheme theme = new WhiteTheme();
+					item.ForeColor = theme.filestrip_text;
+					item.BackColor = theme.filestrip_back;
+				}
+				
 				item.Tag = menuStrip1.Items[i].Tag;
 				item.CheckState = CheckState.Unchecked;
 				item.Checked = false;

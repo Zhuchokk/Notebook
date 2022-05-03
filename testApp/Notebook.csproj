@@ -254,6 +254,7 @@
     <Compile Include="FlatNumericUpDown.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Highlighting.cs" />
     <Compile Include="ImageForm.cs">
       <SubType>Form</SubType>
     </Compile>
