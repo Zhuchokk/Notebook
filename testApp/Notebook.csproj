@@ -365,6 +365,9 @@
     <EmbeddedResource Include="TranslationForm.resx">
       <DependentUpon>TranslationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TranslationForm.ru.resx">
+      <DependentUpon>TranslationForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\AutocompleteMenu\AutocompleteMenu\AutocompleteMenu.csproj">
