@@ -25,9 +25,15 @@ namespace testApp
 
 		public MainForm()
 		{
+			settings = new SettingsJson().fromJson(Jsonfile);
+
+			if(settings.lang.ToLower() == "russian")
+            {
+				System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ru-RU");
+			}
 			
 			InitializeComponent();
-			settings = new SettingsJson().fromJson(Jsonfile);
+			
 			preparing();
 			if(settings.theme.ToLower() == "black")
             {
@@ -776,7 +782,7 @@ namespace testApp
 			settings.theme = "black";
 			SettingsJson json = new SettingsJson();
 			json.toJson(Jsonfile, settings);
-			restart_themes();
+			restart("You have unsaved changes. Do you want to restart and change the theme? All unsaved changes will be deleted");
         } 
 
         private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -785,7 +791,7 @@ namespace testApp
 			settings.theme = "white";
 			SettingsJson json = new SettingsJson();
 			json.toJson(Jsonfile, settings);
-			restart_themes();
+			restart("You have unsaved changes. Do you want to restart and change the theme? All unsaved changes will be deleted");
 		} 
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -796,7 +802,7 @@ namespace testApp
 				exit(sender, e);
 			}	
         }
-		private void restart_themes()
+		private void restart(string text_for_box)
         {
 			bool changes = false;
 			for (int i = 0; i < textfiles.Length; i++)
@@ -805,7 +811,7 @@ namespace testApp
 			}
 			if (changes)
 			{
-				DialogResult res = MessageBox.Show("You have unsaved changes. Do you want to restart and change the theme? All unsaved changes will be deleted", "Notebook", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+				DialogResult res = MessageBox.Show(text_for_box, "Notebook", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 				if (res == DialogResult.No) { return; }
 			}
 			settings.used_files = new string[0];
@@ -923,6 +929,32 @@ namespace testApp
                 restoreDefaultZoomToolStripMenuItem_Click(sender, e);
             }
 		}
-	}
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			if(settings.lang.ToLower() == "english")
+            {
+				return;
+            }
+            else
+            {
+				settings.lang = "english";
+				restart("You have unsaved changes. Do you want to restart and change the language? All unsaved changes will be deleted");
+            }
+        }
+
+        private void russianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			if (settings.lang.ToLower() == "russian")
+			{
+				return;
+			}
+			else
+			{
+				settings.lang = "russian";
+				restart("You have unsaved changes. Do you want to restart and change the theme? All unsaved changes will be deleted");
+			}
+		}
+    }
 	
 }
