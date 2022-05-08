@@ -29,6 +29,7 @@ namespace testApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecognitionForm));
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new testApp.FlatCombo();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -38,71 +39,50 @@ namespace testApp
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 25);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Language:";
             // 
             // comboBox1
             // 
+            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "English",
-            "Russian"});
-            this.comboBox1.Location = new System.Drawing.Point(95, 25);
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1")});
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "English";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(130, 70);
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 22);
-            this.textBox1.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 70);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Recognized text";
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(18, 103);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 34);
-            this.button1.TabIndex = 4;
             this.button1.Tag = "0";
-            this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // RecognitionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 155);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(433, 202);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(433, 202);
             this.Name = "RecognitionForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Recognition";
             this.ResumeLayout(false);
             this.PerformLayout();
 

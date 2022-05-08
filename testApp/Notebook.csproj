@@ -341,6 +341,9 @@
     <EmbeddedResource Include="RecognitionForm.resx">
       <DependentUpon>RecognitionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RecognitionForm.ru.resx">
+      <DependentUpon>RecognitionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReplaceForm.resx">
       <DependentUpon>ReplaceForm.cs</DependentUpon>
     </EmbeddedResource>
