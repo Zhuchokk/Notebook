@@ -353,6 +353,9 @@
     <EmbeddedResource Include="SynthesizerForm.resx">
       <DependentUpon>SynthesizerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SynthesizerForm.ru.resx">
+      <DependentUpon>SynthesizerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TranslationForm.resx">
       <DependentUpon>TranslationForm.cs</DependentUpon>
     </EmbeddedResource>
