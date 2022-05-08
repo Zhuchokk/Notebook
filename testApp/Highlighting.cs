@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Drawing;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Windows.Forms;
@@ -63,17 +63,27 @@ namespace testApp
 
             keywords += @"|\([^()]*\)|";
             keywords += "[" + @"\" + "\"'][^" + @"\" + "\"']*[" + @"\" + "\"']|";
-            keywords += @" [^() ]*\(.{0,}\)";
+            keywords += @" [^() ]*\(.{0,}\) |";
             keywords += ")";
             // for (this text) \([^()]*\)
             // for 'this' or "this" text [\"'][^\"']*[\"']
             //  for titles [^() ]*\(.{0,}\)
             Console.WriteLine("Indexes:" + strings.Length + " Index str " + index_str + " lines " + textBox.Lines.Length);
+            int start_index = textBox.SelectionStart;
+
+
             foreach(int ln_index in strings)
             {
                 foreach(Match match in Regex.Matches(textBox.Lines[ln_index], keywords))
                 {
-                    Console.WriteLine("Value:" + match.Value + " index " + match.Index + " 123 ");
+                    if (match.Success)
+                    {
+                        Console.WriteLine("Value:" + match.Value + " index " + match.Index + " 123 ");
+                        textBox.Select(textBox.GetFirstCharIndexFromLine(ln_index)  + match.Index, match.Value.Length);
+                        textBox.SelectionColor = Color.Aqua;
+                        textBox.Select(start_index, 0);
+                        
+                    }
                     
                 }
             }

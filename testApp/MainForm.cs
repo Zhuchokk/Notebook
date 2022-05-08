@@ -18,7 +18,6 @@ namespace testApp
 	{
 		public Textfile[] textfiles = { };
 		public Settings settings = new Settings();
-		public Highlighting text_match = new Highlighting();
 		string Jsonfile = Application.StartupPath + @"\settings.json";
 		int index = 0;
 		bool open = false;
@@ -412,7 +411,6 @@ namespace testApp
         {
             if (open) { open = false; return; }
 			textfiles[index].change(true);
-			text_match.some_strings_highlight(ref richTextBox1, richTextBox1.GetLineFromCharIndex(richTextBox1.SelectionStart), textfiles[index]);
 
 		}
 
