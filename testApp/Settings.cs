@@ -23,6 +23,7 @@ namespace testApp
         public int appear_interval;
         public int minlen_fragment;
         public string dictionary;
+        public string lang;
 
         public Settings()
         {
@@ -38,6 +39,7 @@ namespace testApp
             appear_interval = 400;
             minlen_fragment = 2;
             dictionary = "User-English";
+            lang = "english";
         }
     }
     class SettingsJson

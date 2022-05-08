@@ -84,6 +84,9 @@ namespace testApp
             this.translatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.russianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lineNumbers_For_RichTextBox1 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.toolStripSeparator1 = new testApp.ExtendedToolStripSeparator();
             this.toolStripSeparator2 = new testApp.ExtendedToolStripSeparator();
@@ -358,6 +361,7 @@ namespace testApp
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.languageToolStripMenuItem,
             this.themeToolStripMenuItem,
             this.toolStripMenuItem2,
             this.fontToolStripMenuItem,
@@ -376,7 +380,7 @@ namespace testApp
             this.blackToolStripMenuItem,
             this.whiteToolStripMenuItem});
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            this.themeToolStripMenuItem.Size = new System.Drawing.Size(176, 28);
+            this.themeToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.themeToolStripMenuItem.Text = "Theme";
             // 
             // blackToolStripMenuItem
@@ -400,7 +404,7 @@ namespace testApp
             this.zoomOutToolStripMenuItem,
             this.restoreDefaultZoomToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(176, 28);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(224, 28);
             this.toolStripMenuItem2.Text = "Zoom";
             // 
             // zoomInToolStripMenuItem
@@ -430,7 +434,7 @@ namespace testApp
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(176, 28);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.fontToolStripMenuItem.Text = "Font";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
@@ -439,7 +443,7 @@ namespace testApp
             this.numbarToolStripMenuItem.Checked = true;
             this.numbarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.numbarToolStripMenuItem.Name = "numbarToolStripMenuItem";
-            this.numbarToolStripMenuItem.Size = new System.Drawing.Size(176, 28);
+            this.numbarToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.numbarToolStripMenuItem.Text = "Numbar";
             this.numbarToolStripMenuItem.Click += new System.EventHandler(this.numbarToolStripMenuItem_Click);
             // 
@@ -448,7 +452,7 @@ namespace testApp
             this.statusStripToolStripMenuItem.Checked = true;
             this.statusStripToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.statusStripToolStripMenuItem.Name = "statusStripToolStripMenuItem";
-            this.statusStripToolStripMenuItem.Size = new System.Drawing.Size(176, 28);
+            this.statusStripToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.statusStripToolStripMenuItem.Text = "StatusStrip";
             this.statusStripToolStripMenuItem.Click += new System.EventHandler(this.toolStripToolStripMenuItem_Click);
             // 
@@ -457,7 +461,7 @@ namespace testApp
             this.wordWrapToolStripMenuItem.Checked = true;
             this.wordWrapToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.wordWrapToolStripMenuItem.Name = "wordWrapToolStripMenuItem";
-            this.wordWrapToolStripMenuItem.Size = new System.Drawing.Size(176, 28);
+            this.wordWrapToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.wordWrapToolStripMenuItem.Text = "WordWrap";
             this.wordWrapToolStripMenuItem.Click += new System.EventHandler(this.wordWrapToolStripMenuItem_Click);
             // 
@@ -539,6 +543,27 @@ namespace testApp
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
             // 
+            // languageToolStripMenuItem
+            // 
+            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem,
+            this.russianToolStripMenuItem});
+            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            this.languageToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.languageToolStripMenuItem.Text = "Language";
+            // 
+            // englishToolStripMenuItem
+            // 
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.englishToolStripMenuItem.Text = "English";
+            // 
+            // russianToolStripMenuItem
+            // 
+            this.russianToolStripMenuItem.Name = "russianToolStripMenuItem";
+            this.russianToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.russianToolStripMenuItem.Text = "Russian";
+            // 
             // lineNumbers_For_RichTextBox1
             // 
             this.lineNumbers_For_RichTextBox1._SeeThroughMode_ = false;
@@ -603,7 +628,7 @@ namespace testApp
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(173, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(221, 6);
             // 
             // MainForm
             // 
@@ -690,5 +715,8 @@ namespace testApp
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem OpenedFilesMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem russianToolStripMenuItem;
     }
 }
