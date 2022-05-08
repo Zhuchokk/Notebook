@@ -530,7 +530,24 @@ namespace testApp
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-			richTextBox1.SelectedText = "";
+			if(richTextBox1.SelectedText == "")
+            {
+                try
+                {
+					richTextBox1.Select(richTextBox1.SelectionStart, 1);
+					richTextBox1.SelectedText = "";
+				}
+                catch
+                {
+
+                }
+				
+			}
+            else
+            {
+				richTextBox1.SelectedText = "";
+            }
+			
         }
 
         private void searchWithGoogleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -892,6 +909,20 @@ namespace testApp
             }
 			OpenedFilesMenuItem.DropDownItems.AddRange(items);
 		}
-    }
+
+		private void Form1_KeyUp(object sender, KeyEventArgs e)
+		{
+            if(e.Control && e.KeyCode == Keys.Add)
+            {
+                zoomInToolStripMenuItem_Click(sender, e);
+            } else if(e.Control && e.KeyCode == Keys.Subtract)
+            {
+                zoomOutToolStripMenuItem_Click(sender, e);
+            } else if(e.Control && e.KeyCode == Keys.NumPad0)
+            {
+                restoreDefaultZoomToolStripMenuItem_Click(sender, e);
+            }
+		}
+	}
 	
 }
