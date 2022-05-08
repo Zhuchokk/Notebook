@@ -353,6 +353,9 @@
     <EmbeddedResource Include="SwitchForm.resx">
       <DependentUpon>SwitchForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SwitchForm.ru.resx">
+      <DependentUpon>SwitchForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SynthesizerForm.resx">
       <DependentUpon>SynthesizerForm.cs</DependentUpon>
     </EmbeddedResource>
