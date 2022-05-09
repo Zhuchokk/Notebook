@@ -77,8 +77,8 @@ namespace testApp
             {
                 richTextBox1.Text = richTextBox2.Text;
             }
-            var tmp = comboBox1.SelectedItem;
-            comboBox1.SelectedItem = comboBox2.SelectedItem;
+            var tmp = comboBox1.Text;
+            comboBox1.Text = comboBox2.Text;
             comboBox2.SelectedItem = tmp;
             
             
@@ -107,7 +107,7 @@ namespace testApp
             string from_lan = "en";
             string to_lan = "ru";
 
-            switch (comboBox1.SelectedItem.ToString())
+            switch (comboBox1.Text)
             {
                 case "English":
                     from_lan = "en";
@@ -122,7 +122,7 @@ namespace testApp
                     from_lan = "de";
                     break;
             }
-            switch (comboBox2.SelectedItem.ToString())
+            switch (comboBox2.Text)
             {
                 case "English":
                     to_lan = "en";

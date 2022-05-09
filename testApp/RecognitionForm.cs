@@ -63,9 +63,10 @@ namespace testApp
             {
                 
                 string lang = "";
-                if (comboBox1.SelectedItem.ToString() == "English")
+                if ((string)(comboBox1.Text) == "English")
                 {
                     lang = "en";
+                    
                 }
                 else
                 {

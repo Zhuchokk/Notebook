@@ -151,7 +151,7 @@ namespace testApp
         {
             string text = box.SelectedText;
             string new_text = "";
-            if(comboBox1.SelectedItem.ToString() == "Qwerty")
+            if(comboBox1.Text == "Qwerty")
             {
                 for(int i=0; i < text.Length; i++)
                 {
@@ -200,25 +200,25 @@ namespace testApp
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBox1.SelectedItem.ToString() == "Qwerty")
+            if(comboBox1.Text == "Qwerty")
             {
-                comboBox2.SelectedItem = "Йцукен";
+                comboBox2.Text = "Йцукен";
             }
             else
             {
-                comboBox2.SelectedItem = "Qwerty";
+                comboBox2.Text = "Qwerty";
             }
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox2.SelectedItem.ToString() == "Qwerty")
+            if (comboBox2.Text == "Qwerty")
             {
-                comboBox1.SelectedItem = "Йцукен";
+                comboBox1.Text = "Йцукен";
             }
             else
             {
-                comboBox1.SelectedItem = "Qwerty";
+                comboBox1.Text = "Qwerty";
             }
         }
     }
