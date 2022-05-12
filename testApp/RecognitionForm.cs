@@ -89,7 +89,7 @@ namespace testApp
                 }
                 catch
                 {
-                    MessageBox.Show("Error!Maybe you don't have a "+ lang + " pocket in your PC", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Strings.pocket_err1 + " "+ lang + " "+ Strings.pocket_err2, "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 
 

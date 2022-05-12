@@ -86,7 +86,7 @@ namespace testApp
         {
             if (!File.Exists(textBox1.Text))
             {
-                MessageBox.Show("File doesn't exist!", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Strings.File_exist, "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             button2.Text = "Processing...";

@@ -227,17 +227,17 @@ namespace testApp
 
             if (response > 1)
             {
-                MessageBox.Show("Notebook replaced " + response + " substrings with '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Strings.replaced1 + " " + response + " " + Strings.many_replaced2 +" '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 activate();
             }
             else if (response == 1)
             {
-                MessageBox.Show("Notebook replaced " + response + " substring with '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Strings.replaced1 + " " + response + " " + Strings.one_replaced2 + " '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 activate();
             }
             else
             {
-                MessageBox.Show("Cannot find '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Strings.Cannot_find + " '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -252,7 +252,7 @@ namespace testApp
             }
             else
             {
-                MessageBox.Show("Cannot find selected text '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Strings.Cannot_find_selected + " '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void button4_Click(object sender, EventArgs e)
@@ -270,7 +270,7 @@ namespace testApp
                 index = find(richTextBox.Text, text_to_find, match, vector, wrap);
                 if (index == -1)
                 {
-                    MessageBox.Show("Cannot find '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(Strings.Cannot_find + " '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -288,7 +288,7 @@ namespace testApp
                 index = find(richTextBox.Text, text_to_find, match, vector, wrap);
                 if (index == -1)
                 {
-                    MessageBox.Show("Cannot find '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(Strings.Cannot_find +" '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

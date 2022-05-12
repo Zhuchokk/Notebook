@@ -239,6 +239,11 @@
     <Compile Include="RecognitionForm.Designer.cs">
       <DependentUpon>RecognitionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
     <Compile Include="SwitchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,6 +332,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReplaceForm.ru.resx">
       <DependentUpon>ReplaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SwitchForm.resx">
       <DependentUpon>SwitchForm.cs</DependentUpon>

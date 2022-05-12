@@ -327,7 +327,7 @@ namespace testApp
                     if (textfiles[i].changed)
                     {
 						Console.WriteLine("Yep close");
-						DialogResult result = MessageBox.Show("Do you want to save changes ?", "Notebook", MessageBoxButtons.YesNoCancel);
+						DialogResult result = MessageBox.Show(Strings.Save_question, "Notebook", MessageBoxButtons.YesNoCancel);
 						if(result == DialogResult.Yes)
                         {
 							textfiles[i].save();
@@ -475,7 +475,7 @@ namespace testApp
             }
             if (changes)
             {
-				DialogResult res =  MessageBox.Show("You have unsaved changes. Do you want to exit? All unsaved changes will be deleted", "Notebook", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+				DialogResult res =  MessageBox.Show(Strings.Unsave_exit, "Notebook", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 				if (res == DialogResult.No) { return; }
             }
 			settings.used_files = new string[0];
@@ -782,7 +782,7 @@ namespace testApp
 			settings.theme = "black";
 			SettingsJson json = new SettingsJson();
 			json.toJson(Jsonfile, settings);
-			restart("You have unsaved changes. Do you want to restart and change the theme? All unsaved changes will be deleted");
+			restart(Strings.Unsave_theme);
         } 
 
         private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -791,7 +791,7 @@ namespace testApp
 			settings.theme = "white";
 			SettingsJson json = new SettingsJson();
 			json.toJson(Jsonfile, settings);
-			restart("You have unsaved changes. Do you want to restart and change the theme? All unsaved changes will be deleted");
+			restart(Strings.Unsave_theme);
 		} 
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -939,7 +939,7 @@ namespace testApp
             else
             {
 				settings.lang = "english";
-				restart("You have unsaved changes. Do you want to restart and change the language? All unsaved changes will be deleted");
+				restart(Strings.Unsave_lang);
             }
         }
 
@@ -952,7 +952,7 @@ namespace testApp
 			else
 			{
 				settings.lang = "russian";
-				restart("You have unsaved changes. Do you want to restart and change the theme? All unsaved changes will be deleted");
+				restart(Strings.Unsave_lang);
 			}
 		}
     }

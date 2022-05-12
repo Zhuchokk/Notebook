@@ -176,7 +176,7 @@ namespace testApp
                 index = find(richTextBox.Text, text_to_find, match, vector, wrap);
                 if(index == -1)
                 {
-                    MessageBox.Show("Cannot find '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(Strings.Cannot_find + " '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -194,7 +194,7 @@ namespace testApp
                 index = find(richTextBox.Text, text_to_find, match, vector, wrap);
                 if(index == -1)
                 {
-                    MessageBox.Show("Cannot find '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(Strings.Cannot_find + " '" + text_to_find + "'", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

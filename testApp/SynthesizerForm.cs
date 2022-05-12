@@ -68,7 +68,7 @@ namespace testApp
             }
             catch
             {
-                MessageBox.Show("Error!Maybe you don't have a synthesizer pockets in your PC", "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Strings.Synth_err, "Notebook", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             GC.Collect();
             button1.Enabled = true;
