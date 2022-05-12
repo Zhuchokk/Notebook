@@ -955,6 +955,15 @@ namespace testApp
 				restart(Strings.Unsave_lang);
 			}
 		}
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			undoToolStripMenuItem.Enabled = richTextBox1.CanUndo;
+			cutToolStripMenuItem.Enabled = (richTextBox1.SelectedText != "");
+			copyToolStripMenuItem.Enabled = (richTextBox1.SelectedText != "");
+			pasteToolStripMenuItem.Enabled = Clipboard.ContainsText();
+
+		}
     }
 	
 }
