@@ -188,6 +188,19 @@ namespace testApp
         {
 			install_theme_mainform();
 
+			foreach(object menuItem in menuStrip2.Items)
+            {
+				
+				if(menuItem.GetType() != toolStripSeparator1.GetType()) {
+					if (((ToolStripMenuItem)menuItem).Tag != "tick")
+					{
+						((ToolStripDropDownMenu)((ToolStripMenuItem)menuItem).DropDown).ShowImageMargin = false;
+					}
+					
+				}
+				
+			}
+
 			for (int i = 0; i < settings.used_files.Length; i++)
 			{
 				if (!File.Exists(settings.used_files[i])) { continue; }

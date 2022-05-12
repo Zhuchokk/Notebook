@@ -340,6 +340,7 @@ namespace testApp
             this.wordWrapToolStripMenuItem});
             resources.ApplyResources(this.viewToolStripMenuItem, "viewToolStripMenuItem");
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Tag = "tick";
             // 
             // languageToolStripMenuItem
             // 
@@ -425,6 +426,7 @@ namespace testApp
             this.numbarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.numbarToolStripMenuItem.Name = "numbarToolStripMenuItem";
             resources.ApplyResources(this.numbarToolStripMenuItem, "numbarToolStripMenuItem");
+            this.numbarToolStripMenuItem.Tag = "tick";
             this.numbarToolStripMenuItem.Click += new System.EventHandler(this.numbarToolStripMenuItem_Click);
             // 
             // statusStripToolStripMenuItem
@@ -433,6 +435,7 @@ namespace testApp
             this.statusStripToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.statusStripToolStripMenuItem.Name = "statusStripToolStripMenuItem";
             resources.ApplyResources(this.statusStripToolStripMenuItem, "statusStripToolStripMenuItem");
+            this.statusStripToolStripMenuItem.Tag = "tick";
             this.statusStripToolStripMenuItem.Click += new System.EventHandler(this.toolStripToolStripMenuItem_Click);
             // 
             // wordWrapToolStripMenuItem
@@ -441,6 +444,7 @@ namespace testApp
             this.wordWrapToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.wordWrapToolStripMenuItem.Name = "wordWrapToolStripMenuItem";
             resources.ApplyResources(this.wordWrapToolStripMenuItem, "wordWrapToolStripMenuItem");
+            this.wordWrapToolStripMenuItem.Tag = "tick";
             this.wordWrapToolStripMenuItem.Click += new System.EventHandler(this.wordWrapToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
