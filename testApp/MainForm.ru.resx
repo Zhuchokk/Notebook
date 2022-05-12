@@ -463,13 +463,13 @@
     <value>Правка</value>
   </data>
   <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>187, 28</value>
   </data>
   <data name="englishToolStripMenuItem.Text" xml:space="preserve">
     <value>Английский</value>
   </data>
   <data name="russianToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>187, 28</value>
   </data>
   <data name="russianToolStripMenuItem.Text" xml:space="preserve">
     <value>Русский</value>
