@@ -325,6 +325,9 @@
     <EmbeddedResource Include="ReplaceForm.resx">
       <DependentUpon>ReplaceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReplaceForm.ru.resx">
+      <DependentUpon>ReplaceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SwitchForm.resx">
       <DependentUpon>SwitchForm.cs</DependentUpon>
     </EmbeddedResource>
