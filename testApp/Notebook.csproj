@@ -307,6 +307,9 @@
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="About.ru.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AutocompleteForm.resx">
       <DependentUpon>AutocompleteForm.cs</DependentUpon>
     </EmbeddedResource>
