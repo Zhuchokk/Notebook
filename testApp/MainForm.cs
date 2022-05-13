@@ -977,6 +977,12 @@ namespace testApp
 			pasteToolStripMenuItem.Enabled = Clipboard.ContainsText();
 
 		}
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Form about = new About();
+			about.Show();
+        }
     }
 	
 }

@@ -651,7 +651,7 @@
     <value>Russian</value>
   </data>
   <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>176, 28</value>
   </data>
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
     <value>Language</value>
@@ -669,7 +669,7 @@
     <value>White</value>
   </data>
   <data name="themeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>176, 28</value>
   </data>
   <data name="themeToolStripMenuItem.Text" xml:space="preserve">
     <value>Theme</value>
@@ -702,34 +702,34 @@
     <value>Restore Default Zoom</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>176, 28</value>
   </data>
   <data name="toolStripMenuItem2.Text" xml:space="preserve">
     <value>Zoom</value>
   </data>
   <data name="fontToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>176, 28</value>
   </data>
   <data name="fontToolStripMenuItem.Text" xml:space="preserve">
     <value>Font</value>
   </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 6</value>
+    <value>173, 6</value>
   </data>
   <data name="numbarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>176, 28</value>
   </data>
   <data name="numbarToolStripMenuItem.Text" xml:space="preserve">
     <value>Numbar</value>
   </data>
   <data name="statusStripToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>176, 28</value>
   </data>
   <data name="statusStripToolStripMenuItem.Text" xml:space="preserve">
     <value>StatusStrip</value>
   </data>
   <data name="wordWrapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+    <value>176, 28</value>
   </data>
   <data name="wordWrapToolStripMenuItem.Text" xml:space="preserve">
     <value>WordWrap</value>
@@ -789,13 +789,13 @@
     <value>Options</value>
   </data>
   <data name="viewHelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 28</value>
+    <value>224, 28</value>
   </data>
   <data name="viewHelpToolStripMenuItem.Text" xml:space="preserve">
     <value>View Help</value>
   </data>
   <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 28</value>
+    <value>224, 28</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>About...</value>
@@ -861,7 +861,7 @@
     <value>lineNumbers_For_RichTextBox1</value>
   </data>
   <data name="&gt;&gt;lineNumbers_For_RichTextBox1.Type" xml:space="preserve">
-    <value>LineNumbers.LineNumbers_For_RichTextBox, testApp, Version=1.0.8167.36186, Culture=neutral, PublicKeyToken=null</value>
+    <value>LineNumbers.LineNumbers_For_RichTextBox, testApp, Version=1.0.8168.35446, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lineNumbers_For_RichTextBox1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1219,7 +1219,7 @@
     <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>testApp.ExtendedToolStripSeparator, testApp, Version=1.0.8167.36186, Culture=neutral, PublicKeyToken=null</value>
+    <value>testApp.ExtendedToolStripSeparator, testApp, Version=1.0.8168.35446, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
     <value>exitToolStripMenuItem</value>
@@ -1243,7 +1243,7 @@
     <value>toolStripSeparator2</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>testApp.ExtendedToolStripSeparator, testApp, Version=1.0.8167.36186, Culture=neutral, PublicKeyToken=null</value>
+    <value>testApp.ExtendedToolStripSeparator, testApp, Version=1.0.8168.35446, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;cutToolStripMenuItem.Name" xml:space="preserve">
     <value>cutToolStripMenuItem</value>
@@ -1273,7 +1273,7 @@
     <value>toolStripSeparator3</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>testApp.ExtendedToolStripSeparator, testApp, Version=1.0.8167.36186, Culture=neutral, PublicKeyToken=null</value>
+    <value>testApp.ExtendedToolStripSeparator, testApp, Version=1.0.8168.35446, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;searchWithGoogleToolStripMenuItem.Name" xml:space="preserve">
     <value>searchWithGoogleToolStripMenuItem</value>
@@ -1297,7 +1297,7 @@
     <value>toolStripSeparator4</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
-    <value>testApp.ExtendedToolStripSeparator, testApp, Version=1.0.8167.36186, Culture=neutral, PublicKeyToken=null</value>
+    <value>testApp.ExtendedToolStripSeparator, testApp, Version=1.0.8168.35446, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;selectAllToolStripMenuItem.Name" xml:space="preserve">
     <value>selectAllToolStripMenuItem</value>
@@ -1387,7 +1387,7 @@
     <value>toolStripSeparator5</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
-    <value>testApp.ExtendedToolStripSeparator, testApp, Version=1.0.8167.36186, Culture=neutral, PublicKeyToken=null</value>
+    <value>testApp.ExtendedToolStripSeparator, testApp, Version=1.0.8168.35446, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;numbarToolStripMenuItem.Name" xml:space="preserve">
     <value>numbarToolStripMenuItem</value>
