@@ -16,6 +16,7 @@ namespace testApp
         public Settings settings;
         public ImageForm(Settings s)
         {
+            IronOcr.License.LicenseKey = "IRONOCR.AZHUCHOK207.13439-B67F14DC8B-JCWOILRKJODQ6-7DTTL75CANCV-FYBXCC5TDURQ-WCFMBJFBYOQN-BFCBX3WSMCMS-NDMQBP-TUB6RP7CDE2GEA-DEPLOYMENT.TRIAL-PVJCTE.TRIAL.EXPIRES.19.JUN.2022";
             InitializeComponent();
             settings = s;
 

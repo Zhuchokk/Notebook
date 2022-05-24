@@ -983,6 +983,18 @@ namespace testApp
 			Form about = new About();
 			about.Show();
         }
+
+        private void viewHelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			if(settings.lang.ToLower() == "english")
+            {
+				Process.Start(Application.StartupPath + @"\help_en.chm");
+            }
+            else
+            {
+				Process.Start(Application.StartupPath + @"\help_ru.chm");
+			}
+        }
     }
 	
 }
