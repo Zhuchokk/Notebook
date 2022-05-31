@@ -19,12 +19,18 @@ namespace testApp
         public SynthesizerForm(Settings s)
         {
             InitializeComponent();
-            using (synth = new SpeechSynthesizer()){
-                foreach (var v in synth.GetInstalledVoices().Select(v => v.VoiceInfo))
+            try
+            {
+                using (synth = new SpeechSynthesizer())
                 {
-                    comboBox1.Items.Add(v.Name);
+                    foreach (var v in synth.GetInstalledVoices().Select(v => v.VoiceInfo))
+                    {
+                        comboBox1.Items.Add(v.Name);
+                    }
                 }
             }
+            catch { }
+            
             comboBox1.SelectedIndex = 0;
             
 
