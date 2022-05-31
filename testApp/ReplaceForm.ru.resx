@@ -143,7 +143,7 @@
     <value>259, 22</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 30</value>
+    <value>126, 30</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
     <value>Заменить</value>
@@ -152,13 +152,13 @@
     <value>Microsoft Sans Serif, 7.1pt</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 30</value>
+    <value>126, 30</value>
   </data>
   <data name="button2.Text" xml:space="preserve">
     <value>Заменить все</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 30</value>
+    <value>126, 30</value>
   </data>
   <data name="button3.Text" xml:space="preserve">
     <value>Отменить</value>
@@ -182,7 +182,7 @@
     <value>Вниз</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 30</value>
+    <value>126, 30</value>
   </data>
   <data name="button4.Text" xml:space="preserve">
     <value>Найти след.</value>
@@ -198,6 +198,12 @@
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Переносить вокруг</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>529, 238</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>547, 285</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Заменить</value>

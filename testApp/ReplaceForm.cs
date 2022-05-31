@@ -95,7 +95,7 @@ namespace testApp
         public int find(string main, string to_find, bool match, int vector, bool wrap)
         {
             bool flag = false;
-            if (match)
+            if (!match)
             {
                 main = main.ToLower();
                 to_find = to_find.ToLower();
@@ -187,7 +187,7 @@ namespace testApp
             bool flag = false;
             int response = 0;
 
-            if (match)
+            if (!match)
             {
                 main = main.ToLower();
                 to_find = to_find.ToLower();
